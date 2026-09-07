@@ -1,0 +1,23 @@
+[
+  {
+    "stepNumber": "01",
+    "title": "Contact Us",
+    "description": "Contact Auto TintGard with your vehicle details and the service you need. We'll answer your questions and let you know the next steps.",
+    "icon": "MessageSquareText",
+    "link": "/contact"
+  },
+  {
+    "stepNumber": "02",
+    "title": "Schedule Your Estimate",
+    "description": "Choose a suitable time to bring your vehicle in. Our team will confirm the service, timing, and any preparation needed before the appointment.",
+    "icon": "CalendarCheck",
+    "link": "/contact"
+  },
+  {
+    "stepNumber": "03",
+    "title": "Get The Job Done",
+    "description": "We'll carry out the work carefully and keep the process straightforward. Once finished, your vehicle will be ready for pickup with the service completed properly.",
+    "icon": "CheckCircle2",
+    "link": "/contact"
+  }
+]

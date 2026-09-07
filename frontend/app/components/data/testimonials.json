@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "name": "Misbah Yunus",
+    "rating": 5,
+    "review": "Got my new Hyundai tinted with Carbon XP tints. Job was done in a very professional and timely manner. Tints look great and very effective during hot days.",
+    "source": "Google"
+  },
+  {
+    "id": 2,
+    "name": "Alex Naumovski",
+    "rating": 5,
+    "review": "Thanks Omar for doing an awesome job tinting my car. Absolute top tier service and super clean results.",
+    "source": "Google"
+  },
+  {
+    "id": 3,
+    "name": "Tony Balzer",
+    "rating": 5,
+    "review": "Did an excellent job every job. Highly recommend Auto TintGard to anyone looking for premium window tints in Melbourne.",
+    "source": "Google"
+  },
+  {
+    "id": 4,
+    "name": "Sarah Jenkins",
+    "rating": 5,
+    "review": "Fantastic workmanship! The ceramic tint has completely changed how cool the car stays under the sun. Very friendly team.",
+    "source": "Google"
+  },
+  {
+    "id": 5,
+    "name": "Daniel Rossi",
+    "rating": 4,
+    "review": "Great quality tinting and fast turnaround. Communication was clear from the start. Will definitely return for paint protection.",
+    "source": "Google"
+  },
+  {
+    "id": 6,
+    "name": "Chloe Henderson",
+    "rating": 5,
+    "review": "Extremely happy with the dash cam installation and window tinting. Immaculate finish with zero bubbles or flaws.",
+    "source": "Google"
+  },
+  {
+    "id": 7,
+    "name": "Michael Chang",
+    "rating": 5,
+    "review": "Best tinting shop around Hoppers Crossing. Professional studio setup and top-grade materials used throughout.",
+    "source": "Google"
+  },
+  {
+    "id": 8,
+    "name": "Jessica Taylor",
+    "rating": 5,
+    "review": "Quick quote response, great pricing, and outstanding results on my Ford Ranger. Five stars all around!",
+    "source": "Google"
+  },
+  {
+    "id": 9,
+    "name": "Liam O'Connor",
+    "rating": 4,
+    "review": "Very clean work. Took off my old bubbling tint and replaced it with a sleek dark ceramic film. Looks like a brand new car.",
+    "source": "Google"
+  },
+  {
+    "id": 10,
+    "name": "Priya Sharma",
+    "rating": 5,
+    "review": "Amazing attention to detail. Omar explained all the film percentages clearly so I could choose what suited my family car best.",
+    "source": "Google"
+  },
+  {
+    "id": 11,
+    "name": "David Miller",
+    "rating": 5,
+    "review": "Top tier customer service and expert craftsmanship. My BMW looks aggressive and stays so much cooler inside now.",
+    "source": "Google"
+  },
+  {
+    "id": 12,
+    "name": "Emma Watson",
+    "rating": 5,
+    "review": "Seamless booking experience and completed right on schedule. The cabin privacy is incredible.",
+    "source": "Google"
+  },
+  {
+    "id": 13,
+    "name": "Ryan Gosling",
+    "rating": 5,
+    "review": "Impeccable finish! If you want your car done right the first time without any shortcuts, this is the place to go.",
+    "source": "Google"
+  },
+  {
+    "id": 14,
+    "name": "Hannah Abbott",
+    "rating": 4,
+    "review": "Very professional workspace and great results. Love the lifetime warranty option for peace of mind.",
+    "source": "Google"
+  },
+  {
+    "id": 15,
+    "name": "Karan Patel",
+    "rating": 5,
+    "review": "Phenomenal quality films. You can really tell they have nearly 20 years of experience handling high-end vehicles.",
+    "source": "Google"
+  }
+]

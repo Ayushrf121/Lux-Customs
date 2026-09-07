@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "title": "Toyota LandCruiser Tint",
+    "category": "Car Tinting",
+    "image": "/Gallery/c1.jpg"
+  },
+  {
+    "id": "2",
+    "title": "Classic Van Window Tint",
+    "category": "Custom Tinting",
+    "image": "/Gallery/c2.jpg"
+  },
+  {
+    "id": "3",
+    "title": "Ceramic Paint Protection Finish",
+    "category": "Paint Protection",
+    "image": "/Gallery/c3.jpg"
+  },
+  {
+    "id": "4",
+    "title": "Sleek Luxury SUV Glass",
+    "category": "Car Tinting",
+    "image": "/Gallery/c4.jpg"
+  },
+  {
+    "id": "5",
+    "title": "Premium Sedan Tinting",
+    "category": "Car Tinting",
+    "image": "/Gallery/c5.jpg"
+  },
+  {
+    "id": "6",
+    "title": "Custom Leather Interior",
+    "category": "Interior Detailing",
+    "image": "/Gallery/c6.jpg"
+  },
+  {
+    "id": "7",
+    "title": "Ford Ranger Detailing",
+    "category": "Coating & Care",
+    "image": "/Gallery/c7.jpg"
+  },
+  {
+    "id": "8",
+    "title": "Tesla Model Window Film",
+    "category": "Car Tinting",
+    "image": "/Gallery/c8.jpg"
+  },
+  {
+    "id": "9",
+    "title": "Commercial Equipment Wrap",
+    "category": "Specialist Wrap",
+    "image": "/Gallery/c9.jpg"
+  }
+]
