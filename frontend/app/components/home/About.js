@@ -43,13 +43,13 @@ export default function About() {
               <span>About Us</span>
             </motion.div>
 
-            {/* Main Headline */}
+            {/* Main Headline with Blue Gradient Effect */}
             <motion.h2 
               variants={fadeInFromBottom} 
               custom={0.2}
               className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight"
             >
-              Reliable Car Window Tinting & Protection
+              Advanced Automotive <span className="bg-gradient-to-r from-white via-blue-200 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(59,130,246,0.3)]">Tinting & Shielding Solutions</span>
             </motion.h2>
 
             {/* Description Paragraphs */}
@@ -59,10 +59,10 @@ export default function About() {
               className="space-y-4 text-zinc-300 text-base sm:text-lg leading-relaxed"
             >
               <p>
-                Auto TintGard is a locally owned Melbourne window tinting specialist in Hoppers Crossing, trusted for premium results and honest service.
+                Driven by precision and trusted craftsmanship, <span className="text-blue-400 font-bold underline">Lux Customs</span> brings elite automotive window tinting to Melbourne's west in Hoppers Crossing, setting a higher benchmark for vehicle styling and protection.
               </p>
               <p>
-                With 19+ years of experience, we help protect vehicles from harsh UV, improve comfort and privacy, and enhance every drive with quality tinting, coatings, dash cam solutions, and old tint removal.
+                We upgrade your drive with premium window films, advanced protective coatings, dash cam integrations, and expert old-tint extraction—safeguarding your vehicle from harsh UV rays while maximizing comfort and privacy.
               </p>
             </motion.div>
 
@@ -74,7 +74,7 @@ export default function About() {
             >
               <div className="flex items-center space-x-2 text-zinc-200 text-sm font-medium">
                 <CheckCircle2 className="w-4 h-4 text-blue-500 flex-shrink-0" />
-                <span>19+ Years Expertise</span>
+                <span>6+ Years Expertise</span>
               </div>
               <div className="flex items-center space-x-2 text-zinc-200 text-sm font-medium">
                 <CheckCircle2 className="w-4 h-4 text-blue-500 flex-shrink-0" />
@@ -124,7 +124,7 @@ export default function About() {
               <div className="relative bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden shadow-2xl group">
                 <div className="relative h-[380px] sm:h-[450px] w-full overflow-hidden">
                   <Image 
-                    src="/AboutUs/aboutCar.jpg" 
+                    src="/AboutUs/aboutCar.jpeg" 
                     alt="Luxury Car Detailing & Tinting" 
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
@@ -137,7 +137,7 @@ export default function About() {
                 {/* Floating Experience Badge */}
                 <div className="absolute bottom-6 left-6 bg-zinc-900/95 border border-zinc-700/80 backdrop-blur-md px-5 py-3 rounded-xl shadow-xl flex items-center space-x-3">
                   <div className="w-10 h-10 rounded-lg bg-blue-600/20 flex items-center justify-center text-blue-400 font-bold text-lg">
-                    19+
+                    6+
                   </div>
                   <div>
                     <p className="text-white text-sm font-bold">Years of Trust</p>

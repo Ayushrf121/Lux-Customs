@@ -43,12 +43,13 @@ export default function Process() {
             <span>The Process</span>
           </motion.div>
 
+          {/* Main Headline with Blue Gradient Effect */}
           <motion.h2 
             variants={fadeInFromBottom} 
             custom={0.2}
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight"
           >
-            Our Simple 3 Step Process
+            Our Streamlined 3-Step Process for <span className="bg-gradient-to-r from-white via-blue-200 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(59,130,246,0.3)]">Vehicle Tinting & Protection</span>
           </motion.h2>
 
           <motion.p 
@@ -56,7 +57,7 @@ export default function Process() {
             custom={0.4}
             className="text-zinc-400 text-base sm:text-lg"
           >
-            Getting your car window tinted or protected is straightforward and hassle-free with our expert team.
+            We make it easy for you to get your vehicle looking its best. From initial contact to service completion, our 3-step process ensures a smooth and efficient experience, keeping you informed and confident every step of the way.
           </motion.p>
         </motion.div>
 

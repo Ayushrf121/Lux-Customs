@@ -12,14 +12,21 @@ import ContactSection from './components/home/ContactSection'
 export default function page() {
   return (
     <>
-     <Hero/>
-     <Services/>
-     <Divider/>
-     <About/>
-     <Divider/>
-     <Process/>
-     <Divider/>
-     <Gallery/>
+      <Hero />
+      <Services />
+      <Divider />
+      <About />
+      <Divider />
+      <Process />
+      <Divider />
+      <Gallery />
+      <Divider />
+      <Testimonials />
+      <Divider />
+      <FAQ />
+      <Divider />
+      <ContactSection />
+      <Divider />
     </>
   )
 }

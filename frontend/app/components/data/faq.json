@@ -1,22 +1,32 @@
 [
   {
     "id": 1,
-    "question": "Can you remove an old or bubbling tint?",
-    "answer": "Yes, we provide old tint removal for faded, peeling, or bubbling window film. We remove it carefully so your windows look cleaner and are ready for new tinting if needed."
+    "question": "What types of window tinting do you offer?",
+    "answer": "We provide high-quality window tinting for cars, homes, and offices. Our films help reduce heat, block harmful UV rays, increase privacy, and enhance your vehicle's overall look while complying with legal limits."
   },
   {
     "id": 2,
-    "question": "Do you offer paint protection coatings?",
-    "answer": "Yes, we offer ceramic paint protection and graphene coating options. These help protect your vehicle's paint, improve gloss, and make regular cleaning easier."
+    "question": "Can you remove an old or bubbling tint?",
+    "answer": "Yes, we provide old tint removal services for faded, peeling, or bubbling window film. We remove it carefully so your glass is completely clean and ready for a fresh tint application."
   },
   {
     "id": 3,
-    "question": "What areas do you service?",
-    "answer": "We are based in Hoppers Crossing and service nearby Melbourne areas including Werribee, Wyndham Vale, Tarneit, Truganina, and Point Cook. If you are nearby, contact us to check availability."
+    "question": "Do you offer ceramic paint protection coatings?",
+    "answer": "Yes, we offer advanced ceramic coating options. These provide a high-gloss finish, repel water and dirt, and make regular maintenance and washing much easier while protecting your vehicle's paint."
   },
   {
     "id": 4,
-    "question": "Is there a fee for a consultation or estimate/quote?",
-    "answer": "No, Auto TintGard offers complimentary estimates to all prospective clients."
+    "question": "What is Paint Protection Film (PPF), and do you install it?",
+    "answer": "Yes, we offer Paint Protection Film (PPF) installation. This is a durable, self-healing, transparent film designed to protect your car's high-impact areas (like the front bumper, hood, and fenders) from stone chips, scratches, and road debris."
+  },
+  {
+    "id": 5,
+    "question": "Can I change my vehicle's color with vinyl wrapping?",
+    "answer": "Yes, we specialize in vinyl wrapping to completely transform your vehicle's appearance. Whether you want a full color change, a satin or matte finish, or a roof wrap, we use premium vinyl for a flawless, paint-like look."
+  },
+  {
+    "id": 6,
+    "question": "Do you do custom logos and decals?",
+    "answer": "Yes, we design and apply custom logos and decals for both personal styling and business branding. From commercial vehicle lettering to custom graphics, we bring your vision to life."
   }
 ]

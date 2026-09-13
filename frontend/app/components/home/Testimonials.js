@@ -50,12 +50,13 @@ export default function Testimonials() {
             <span>Testimonials</span>
           </motion.div>
 
+          {/* Main Headline with Blue Gradient Effect */}
           <motion.h2 
             variants={fadeInFromBottom} 
             custom={0.2}
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight"
           >
-            What Our Customers Say About Us
+            What Our Customers Say <span className="bg-gradient-to-r from-white via-blue-200 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(59,130,246,0.3)]">About Us</span>
           </motion.h2>
         </motion.div>
 
@@ -128,7 +129,6 @@ export default function Testimonials() {
           <div className="flex items-center space-x-1 sm:space-x-2 font-medium">
             {[...Array(totalPages)].map((_, index) => {
               const pageNum = index + 1;
-              // Show first, last, current, and surrounding numbers compactly if needed, or all 5 pages directly
               return (
                 <button
                   key={pageNum}

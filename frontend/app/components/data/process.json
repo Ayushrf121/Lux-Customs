@@ -2,21 +2,21 @@
   {
     "stepNumber": "01",
     "title": "Contact Us",
-    "description": "Contact Auto TintGard with your vehicle details and the service you need. We'll answer your questions and let you know the next steps.",
+    "description": "Contact Lux Customs to discuss your vehicle's needs. Our team will provide expert advice and answer any questions you may have about our services.",
     "icon": "MessageSquareText",
     "link": "/contact"
   },
   {
     "stepNumber": "02",
-    "title": "Schedule Your Estimate",
-    "description": "Choose a suitable time to bring your vehicle in. Our team will confirm the service, timing, and any preparation needed before the appointment.",
+    "title": "Schedule Your Appointment",
+    "description": "Once you've decided on the services you need, schedule a convenient time for your vehicle's appointment. Our team will ensure a smooth and efficient process.",
     "icon": "CalendarCheck",
     "link": "/contact"
   },
   {
     "stepNumber": "03",
-    "title": "Get The Job Done",
-    "description": "We'll carry out the work carefully and keep the process straightforward. Once finished, your vehicle will be ready for pickup with the service completed properly.",
+    "title": "Service Completion",
+    "description": "Our skilled technicians will perform the selected services with precision and care. We use high-quality materials and techniques to ensure your vehicle looks its best and is well-protected.",
     "icon": "CheckCircle2",
     "link": "/contact"
   }

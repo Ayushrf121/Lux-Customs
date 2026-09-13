@@ -19,10 +19,10 @@ export default function Navbar() {
                     <div className="flex-shrink-0">
                         <Link href="/" className="flex items-center">
                             <Image
-                                src="/Requirements/logo.webp"
+                                src="/Requirements/logo (3).png"
                                 alt="Auto TintGard Logo"
-                                width={70}
-                                height={60}
+                                width={150}
+                                height={140}
                                 className="object-contain"
                                 priority
                             />
@@ -47,18 +47,20 @@ export default function Navbar() {
                             <button className="flex items-center text-zinc-300 hover:text-blue-500 font-medium transition-colors py-2">
                                 Services
                                 <ChevronDown
-                                    className={`w-4 h-4 ml-1 transition-transform duration-300 ${servicesOpen ? 'rotate-180 text-blue-500' : 'rotate-0'
-                                        }`}
+                                    className={`w-4 h-4 ml-1 transition-transform duration-300 ${
+                                        servicesOpen ? 'rotate-180 text-blue-500' : 'rotate-0'
+                                    }`}
                                 />
                             </button>
 
                             {servicesOpen && (
-                                <div className="absolute top-full left-0 w-56 bg-zinc-900 border border-zinc-800 rounded-lg shadow-xl py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                                    <Link href="/services/car-tinting" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Car Tinting</Link>
-                                    <Link href="/services/ceramic-paint-protection" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Ceramic Paint Protection</Link>
-                                    <Link href="/services/graphene-coating" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Graphene Coating</Link>
-                                    <Link href="/services/dash-cam" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Dash Cam</Link>
-                                    <Link href="/services/old-tint-removal" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Old Tint Removal</Link>
+                                <div className="absolute top-full left-0 w-60 bg-zinc-900 border border-zinc-800 rounded-lg shadow-xl py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                                    <Link href="/services/window-tinting" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Window Tinting</Link>
+                                    <Link href="/services/tint-removal" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Tint Removal</Link>
+                                    <Link href="/services/ceramic-coating" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Ceramic Coating</Link>
+                                    <Link href="/services/paint-protection-film" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Paint Protection Film (PPF)</Link>
+                                    <Link href="/services/vinyl-wrapping" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Vinyl Wrapping</Link>
+                                    <Link href="/services/custom-logos-decals" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Custom Logos/Decals</Link>
                                 </div>
                             )}
                         </div>
@@ -79,8 +81,9 @@ export default function Navbar() {
                             <button className="flex items-center text-zinc-300 hover:text-blue-500 font-medium transition-colors py-2">
                                 Service Areas
                                 <ChevronDown
-                                    className={`w-4 h-4 ml-1 transition-transform duration-300 ${areasOpen ? 'rotate-180 text-blue-500' : 'rotate-0'
-                                        }`}
+                                    className={`w-4 h-4 ml-1 transition-transform duration-300 ${
+                                        areasOpen ? 'rotate-180 text-blue-500' : 'rotate-0'
+                                    }`}
                                 />
                             </button>
 
@@ -107,11 +110,11 @@ export default function Navbar() {
                     <div className="hidden lg:flex items-center space-x-4">
                         {/* Phone Number CTA Button */}
                         <a
-                            href="tel:0483955426"
+                            href="tel:0468317131"
                             className="flex items-center space-x-2 bg-white text-zinc-950 px-4 py-2.5 rounded-md font-semibold hover:bg-zinc-200 transition-colors shadow-sm"
                         >
                             <Phone className="w-4 h-4 text-blue-600" />
-                            <span>0483 955 426</span>
+                            <span>0468 317 131</span>
                         </a>
 
                         {/* Get Free Quote Button */}
@@ -142,11 +145,12 @@ export default function Navbar() {
                     <Link href="/" className="block py-2 text-zinc-300 hover:text-blue-500 font-medium">Home</Link>
                     <div className="py-2 text-zinc-300 font-medium border-t border-zinc-800 pt-3">
                         <p className="text-blue-500 mb-1 text-sm uppercase tracking-wider">Services</p>
-                        <Link href="/services/car-tinting" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Car Tinting</Link>
-                        <Link href="/services/ceramic-paint-protection" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Ceramic Paint Protection</Link>
-                        <Link href="/services/graphene-coating" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Graphene Coating</Link>
-                        <Link href="/services/dash-cam" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Dash Cam</Link>
-                        <Link href="/services/old-tint-removal" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Old Tint Removal</Link>
+                        <Link href="/services/window-tinting" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Window Tinting</Link>
+                        <Link href="/services/tint-removal" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Tint Removal</Link>
+                        <Link href="/services/ceramic-coating" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Ceramic Coating</Link>
+                        <Link href="/services/paint-protection-film" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Paint Protection Film (PPF)</Link>
+                        <Link href="/services/vinyl-wrapping" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Vinyl Wrapping</Link>
+                        <Link href="/services/custom-logos-decals" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Custom Logos/Decals</Link>
                     </div>
                     <Link href="/gallery" className="block py-2 text-zinc-300 hover:text-blue-500 font-medium border-t border-zinc-800 pt-3">Gallery</Link>
                     <div className="py-2 text-zinc-300 font-medium border-t border-zinc-800 pt-3">
@@ -160,9 +164,9 @@ export default function Navbar() {
                     <Link href="/contact" className="block py-2 text-zinc-300 hover:text-blue-500 font-medium border-t border-zinc-800 pt-3">Contact</Link>
 
                     <div className="pt-4 flex flex-col space-y-3 border-t border-zinc-800">
-                        <a href="tel:0483955426" className="flex items-center justify-center space-x-2 bg-zinc-800 text-white py-2.5 rounded-md font-semibold">
+                        <a href="tel:0468317131" className="flex items-center justify-center space-x-2 bg-zinc-800 text-white py-2.5 rounded-md font-semibold">
                             <Phone className="w-4 h-4 text-blue-500" />
-                            <span>0483 955 426</span>
+                            <span>0468 317 131</span>
                         </a>
                         <Link href="/contact" className="text-center bg-blue-600 text-white py-2.5 rounded-md font-semibold hover:bg-blue-700">
                             Get Free Quote

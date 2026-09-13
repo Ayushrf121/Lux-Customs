@@ -43,12 +43,13 @@ export default function FAQ() {
             <span>Frequently Asked Questions</span>
           </motion.div>
 
+          {/* Main Headline with Blue Gradient Effect */}
           <motion.h2 
             variants={fadeInFromBottom} 
             custom={0.2}
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight"
           >
-            Got Questions? We’ve Got Answers
+            Got Questions? <span className="bg-gradient-to-r from-white via-blue-200 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(59,130,246,0.3)]">We’ve Got Answers</span>
           </motion.h2>
         </motion.div>
 
@@ -106,17 +107,6 @@ export default function FAQ() {
                 </motion.div>
               );
             })}
-
-            {/* CTA Button below FAQ */}
-            <div className="pt-6">
-              <Link 
-                href="/contact" 
-                className="group inline-flex items-center justify-center bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-blue-600/30 hover:scale-[1.02]"
-              >
-                <span>Get Free Quote</span>
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1.5 transition-transform" />
-              </Link>
-            </div>
           </motion.div>
 
           {/* Right Column: Visual Showcase Image */}
@@ -136,8 +126,8 @@ export default function FAQ() {
               <div className="relative bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden shadow-2xl group">
                 <div className="relative h-[380px] sm:h-[450px] w-full overflow-hidden">
                   <Image 
-                    src="/Faq/faqCar.jpg" 
-                    alt="Auto TintGard Workshop Vehicle" 
+                    src="/Faq/faqCar.jpeg" 
+                    alt="Lux Customs Workshop Vehicle" 
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                   />

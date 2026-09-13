@@ -4,8 +4,10 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Sparkles, CheckCircle2, AlertCircle, Send, Loader2 } from 'lucide-react';
-import { fadeInFromBottom, staggerContainer } from '../utils/animation';
+import { Phone, Mail, MapPin, Sparkles, CheckCircle2, AlertCircle, Send, Loader2,} from 'lucide-react';
+import Instagram from '../components/icons/InstagramIcon';
+import Facebook from '../components/icons/FacebookIcon';
+import { fadeInFromBottom, staggerContainer } from '../components/utils/animation';
 
 // List of common country codes
 const countryCodes = [
@@ -18,7 +20,7 @@ const countryCodes = [
   { code: '+81', country: 'JP' },
 ];
 
-export default function ContactSection() {
+export default function ContactPage() {
   const [submitting, setSubmitting] = useState(false);
   const [statusMessage, setStatusMessage] = useState({ type: '', text: '' });
 
@@ -29,7 +31,7 @@ export default function ContactSection() {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      countryCode: '+61', // Default to Australia based on your location
+      countryCode: '+61', // Default to Australia
     }
   });
 
@@ -37,7 +39,6 @@ export default function ContactSection() {
     setSubmitting(true);
     setStatusMessage({ type: '', text: '' });
 
-    // Combine country code and phone number if needed for your backend
     const payload = {
       ...data,
       phone: `${data.countryCode} ${data.phone}`,
@@ -50,7 +51,7 @@ export default function ContactSection() {
           type: 'success',
           text: response.data.message || 'Message sent successfully! We will be in touch shortly.',
         });
-        reset(); // Clear form fields
+        reset();
       }
     } catch (error) {
       const errorMsg = error.response?.data?.error || 'Network error. Please check your connection or call us directly.';
@@ -61,19 +62,18 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="py-24 bg-zinc-950 relative overflow-hidden">
+    <div className="bg-zinc-950 text-zinc-300 min-h-screen relative overflow-hidden py-24">
       
       {/* Background Accent Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-12">
         
-        {/* Section Header */}
+        {/* Page Header */}
         <motion.div 
           className="text-center max-w-3xl mx-auto mb-16 space-y-4"
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          animate="visible"
           variants={staggerContainer}
         >
           <motion.div 
@@ -87,20 +87,27 @@ export default function ContactSection() {
             <span>Get In Touch</span>
           </motion.div>
 
-          {/* Main Headline with Blue Gradient Effect */}
-          <motion.h2 
+          <motion.h1 
             variants={fadeInFromBottom} 
             custom={0.2}
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight"
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight"
           >
             Request A <span className="bg-gradient-to-r from-white via-blue-200 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(59,130,246,0.3)]">Free Quote</span>
-          </motion.h2>
+          </motion.h1>
+          
+          <motion.p 
+            variants={fadeInFromBottom} 
+            custom={0.3}
+            className="text-zinc-400 text-base sm:text-lg"
+          >
+            Ready to upgrade your vehicle? Reach out to our studio or fill out the form below.
+          </motion.p>
         </motion.div>
 
         {/* Main Split Grid Container */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-zinc-900/60 border border-zinc-800/80 rounded-3xl p-8 sm:p-12 backdrop-blur-sm shadow-2xl">
           
-          {/* Left Column: Contact Details & Google Map */}
+          {/* Left Column: Contact Details, Socials & Google Map */}
           <motion.div 
             className="lg:col-span-5 space-y-8"
             initial="hidden"
@@ -109,7 +116,7 @@ export default function ContactSection() {
             variants={staggerContainer}
           >
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-white">Lux Customs</h3>
+              <h3 className="text-2xl font-bold text-white">Lux Customs Studio</h3>
               
               <div className="space-y-4">
                 <a href="tel:0468317131" className="flex items-center space-x-4 text-zinc-300 hover:text-blue-400 transition-colors group">
@@ -140,6 +147,29 @@ export default function ContactSection() {
                     <p className="text-xs text-zinc-500 uppercase tracking-wider">Location</p>
                     <p className="font-semibold text-white">85 Kennington Park Dr, Endeavour Hills VIC 3802, Australia</p>
                   </div>
+                </div>
+              </div>
+
+              {/* Social Links Integration (Instagram & Facebook) */}
+              <div className="pt-4 border-t border-zinc-800 space-y-3">
+                <p className="text-xs text-zinc-500 uppercase tracking-wider font-semibold">Connect With Us</p>
+                <div className="flex items-center space-x-4">
+                  <a 
+                    href="https://www.instagram.com/luxcustoms.au/?hl=en" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-11 h-11 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-blue-400 hover:border-blue-500/40 transition-all group"
+                  >
+                    <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                  </a>
+                  <a 
+                    href="https://www.facebook.com/profile.php?id=61593129088390&ref=PROFILE_EDIT_xav_ig_profile_page_web#" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-11 h-11 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-blue-400 hover:border-blue-500/40 transition-all group"
+                  >
+                    <Facebook className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -214,7 +244,6 @@ export default function ContactSection() {
                   Phone *
                 </label>
                 <div className="flex gap-2">
-                  {/* Country Code Select Dropdown */}
                   <select
                     {...register("countryCode")}
                     className="bg-zinc-900 border border-zinc-800 rounded-xl px-3 py-3.5 text-white focus:outline-none focus:border-blue-500 transition-colors text-sm cursor-pointer"
@@ -226,7 +255,6 @@ export default function ContactSection() {
                     ))}
                   </select>
 
-                  {/* Phone Number Input */}
                   <input 
                     type="tel"
                     placeholder="4xx xxx xxx"
@@ -267,7 +295,7 @@ export default function ContactSection() {
                 {errors.terms && <p className="text-rose-500 text-xs mt-1">{errors.terms.message}</p>}
               </div>
 
-              {/* Submit Button with Loading Spinner */}
+              {/* Submit Button */}
               <button 
                 type="submit"
                 disabled={submitting}
@@ -291,6 +319,6 @@ export default function ContactSection() {
 
         </div>
       </div>
-    </section>
+    </div>
   );
 }

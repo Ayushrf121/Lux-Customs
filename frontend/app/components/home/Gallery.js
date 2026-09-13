@@ -35,15 +35,16 @@ export default function Gallery() {
             className="inline-flex items-center space-x-2 bg-blue-600/15 border border-blue-500/40 px-4 py-1.5 rounded-full text-blue-400 text-xs font-semibold tracking-wider uppercase backdrop-blur-md shadow-lg shadow-blue-500/20"
           >
             <Sparkles className="w-3.5 h-3.5 text-blue-400 animate-pulse" />
-            <span>Photo Gallery</span>
+            <span>Glimpse of Our Work</span>
           </motion.div>
 
+          {/* Main Headline with Blue Gradient Effect */}
           <motion.h2 
             variants={fadeInFromBottom} 
             custom={0.2}
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight"
           >
-            See Why Our Customers Love Us
+            Showcase of Our Expertise in <span className="bg-gradient-to-r from-white via-blue-200 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(59,130,246,0.3)]">Vehicle Tinting & Protection</span>
           </motion.h2>
 
           <motion.p 
@@ -51,7 +52,7 @@ export default function Gallery() {
             custom={0.4}
             className="text-zinc-400 text-base sm:text-lg"
           >
-            Explore our recent portfolio of flawless window tinting, protective coatings, and vehicle transformations.
+            Explore our gallery to see the quality and precision of our work.
           </motion.p>
         </motion.div>
 

@@ -1,42 +1,50 @@
 [
   {
-    "id": "car-tinting",
-    "title": "Car Tinting",
-    "description": "Upgrade your vehicle with professional car window tinting designed to reduce heat, improve privacy, and protect your interior from harsh UV exposure. Enjoy a cooler, more comfortable drive with a clean, premium finish.",
-    "image": "/ServicesCars/car1.jpg",
-    "buttonText": "Car Tinting",
-    "link": "/car-tinting"
+    "id": "window-tinting",
+    "title": "Window Tinting",
+    "description": "Enhance your vehicle's privacy, reduce glare, and protect the interior from harmful UV rays with our professional window tinting services. Our high-quality films are designed to improve comfort and style while ensuring long-lasting performance.",
+    "image": "/ServicesCars/car1.webp",
+    "buttonText": "Window Tinting",
+    "link": "/services/window-tinting"
   },
   {
-    "id": "ceramic-paint-protection",
-    "title": "Ceramic Paint Protection",
-    "description": "Protect your vehicle's paint with a durable ceramic coating that helps resist everyday damage, dirt, and environmental wear. It enhances gloss while making your car easier to clean and maintain.",
-    "image": "/ServicesCars/car2.jpg",
-    "buttonText": "Ceramic Paint Protection",
-    "link": "/ceramic-paint-protection"
+    "id": "ceramic-coating",
+    "title": "Ceramic Coating",
+    "description": "Protect your car's paint with our advanced ceramic coating services. This durable layer provides a high-gloss finish, repels dirt and water, and shields your vehicle from environmental contaminants, keeping it looking new for longer.",
+    "image": "/ServicesCars/c2.jpg",
+    "buttonText": "Ceramic Coating",
+    "link": "/services/ceramic-coating"
   },
   {
-    "id": "graphene-coating",
-    "title": "Graphene Coating",
-    "description": "Give your car advanced paint protection with a strong, glossy graphene coating built for long-lasting shine and surface resistance. A great option for drivers who want premium protection and a sleek finish.",
-    "image": "/ServicesCars/car3.webp",
-    "buttonText": "Graphene Coating",
-    "link": "/graphene-coating"
+    "id": "Paint-Protection-Film",
+    "title": "Paint Protection Film",
+    "description": "Shield your car's paint from scratches, chips, and environmental damage with our high-quality paint protection film. This durable solution maintains your vehicle's appearance and increases its resale value.",
+    "image": "/ServicesCars/car3.jpg",
+    "buttonText": "Paint Protection Film",
+    "link": "/services/paint-protection-film"
   },
   {
-    "id": "dash-cam",
-    "title": "Dash Cam",
-    "description": "Drive with extra confidence with a professionally fitted dash cam solution for added safety and peace of mind. Capture important road moments clearly and keep your vehicle protected on every trip.",
-    "image": "/ServicesCars/dash_cam.jpg",
-    "buttonText": "Dash Cam",
-    "link": "/dash-cam"
+    "id": "vinyl-wrapping",
+    "title": "Vinyl Wrapping",
+    "description": "Transform your vehicle's appearance with our professional vinyl wrapping services. We offer a wide range of colors and finishes to give your car a custom look that stands out.",
+    "image": "/ServicesCars/car4.jpg",
+    "buttonText": "Vinyl Wrapping",
+    "link": "/services/vinyl-wrapping"
   },
   {
     "id": "old-tint-removal",
     "title": "Old Tint Removal",
     "description": "Remove bubbling, faded, or damaged tint safely without risking your windows. We help restore a clearer look and prepare your vehicle for fresh, high-quality tinting.",
-    "image": "/ServicesCars/car5.jpg",
+    "image": "/ServicesCars/car5.webp",
     "buttonText": "Old Tint Removal",
-    "link": "/old-tint-removal"
+    "link": "/services/old-tint-removal"
+  },{
+    
+    "id": "custom-logos-decals",
+    "title": "Custom logos/decals",
+    "description": "Improve visibility and enhance your vehicle's appearance with our custom logo and decal services. We create unique designs that make your vehicle stand out.",
+    "image": "/ServicesCars/car6.jpg",
+    "buttonText": "Custom Logos/Decals",
+    "link": "/services/custom-logos-decals"
   }
 ]

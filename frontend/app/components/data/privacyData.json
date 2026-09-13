@@ -1,0 +1,72 @@
+{
+  "businessName": "Lux Customs",
+  "location": {
+    "unit": "Endeavour Hills",
+    "suburb": "Endeavour Hills",
+    "state": "Victoria",
+    "postcode": "3802",
+    "region": "South East Melbourne, Victoria"
+  },
+  "contact": {
+    "website": "www.luxcustoms.com.au",
+    "phone": "0483 955 426",
+    "email": "sales@luxcustoms.com.au"
+  },
+  "sections": [
+    {
+      "id": "introduction",
+      "title": "1. Introduction",
+      "content": "Lux Customs ('we', 'our', or 'us') respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, contact us, book our services, or engage with us for automotive protection solutions."
+    },
+    {
+      "id": "information-collected",
+      "title": "2. Information We Collect",
+      "content": "We may collect personal information that you voluntarily provide to us when you request a quote, book an appointment, fill out a contact form, or communicate with us. This information may include your full name, phone number, email address, vehicle details (make, model, year), service history, and physical address or location data."
+    },
+    {
+      "id": "how-we-use",
+      "title": "3. How We Use Your Information",
+      "content": "We use the information we collect to provide, operate, and maintain our services, process bookings and quotations, communicate with you regarding updates or appointments, send promotional messages or SMS text messages (where you have consented), improve our website functionality, and comply with legal obligations."
+    },
+    {
+      "id": "sms-communications",
+      "title": "4. SMS & Mobile Communications",
+      "content": "By providing your phone number and checking the consent box on our contact forms, you agree to receive SMS text messages from Lux Customs related to your service requests, bookings, quotations, and customer support. You can opt-out of text messaging at any time by replying 'STOP' to any message received from us."
+    },
+    {
+      "id": "disclosure",
+      "title": "5. Disclosure of Your Information",
+      "content": "We do not sell, trade, or rent your personal information to third parties. We may share your data with trusted third-party service providers and IT vendors who assist us in operating our website, conducting our business, or servicing your vehicle, provided those parties agree to keep this information confidential."
+    },
+    {
+      "id": "data-security",
+      "title": "6. Data Security",
+      "content": "We implement appropriate technical and organizational security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, please note that no method of transmission over the internet or electronic storage is 100% secure."
+    },
+    {
+      "id": "cookies",
+      "title": "7. Cookies and Tracking Technologies",
+      "content": "Our website may use cookies and similar tracking technologies to enhance your browsing experience, analyze site traffic, and understand user behavior. You can choose to set your web browser to refuse cookies, though some parts of our website may not function properly as a result."
+    },
+    {
+      "id": "third-party-links",
+      "title": "8. Third-Party Links",
+      "content": "Our website may contain links to third-party websites or services that are not operated by us. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party sites or services."
+    },
+    {
+      "id": "your-rights",
+      "title": "9. Your Privacy Rights",
+      "content": "Under applicable Australian privacy laws, you have the right to request access to the personal information we hold about you, request corrections to any inaccurate data, or ask us to delete your information, subject to certain legal exceptions."
+    },
+    {
+      "id": "changes-to-policy",
+      "title": "10. Changes to This Privacy Policy",
+      "content": "We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date. We encourage you to review this Privacy Policy periodically for any updates."
+    },
+    {
+      "id": "contact-us",
+      "title": "11. Contact Us",
+      "content": "If you have any questions, concerns, or requests regarding this Privacy Policy or how your personal information is handled, please reach out to us directly using our contact details below."
+    }
+  ]
+}

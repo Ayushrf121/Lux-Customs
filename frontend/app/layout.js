@@ -2,10 +2,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/layouts/Navbar";
 import Footer from "./components/layouts/Footer";
-import Testimonials from "./components/home/Testimonials";
-import Divider from "./components/utils/Divider";
-import ContactSection from "./components/home/ContactSection";
-import FAQ from "./components/home/Faq";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,10 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Auto TintGard | Window Tinting & Protection Melbourne",
+  title: "Lux Customs | Professional window tinting and paint protection",
   description: "Professional car window tinting and paint protection in Hoppers Crossing, Melbourne.",
   icons: {
-    icon: '/logo.webp', // Or /favicon.ico depending on what file you used
+    icon: '/Requirements/logo.png', // Or /favicon.ico depending on what file you used
   },
 };
 
@@ -34,13 +30,6 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col">
         <Navbar />
         {children}
-        <Divider />
-        <Testimonials />
-        <Divider />
-        <FAQ/>
-        <Divider />
-        <ContactSection/>
-        <Divider />
         <Footer />
       </body>
     </html>
