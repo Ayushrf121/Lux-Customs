@@ -30,14 +30,6 @@
     "image": "/ServicesCars/car4.jpg",
     "buttonText": "Vinyl Wrapping",
     "link": "/services/vinyl-wrapping"
-  },
-  {
-    "id": "old-tint-removal",
-    "title": "Old Tint Removal",
-    "description": "Remove bubbling, faded, or damaged tint safely without risking your windows. We help restore a clearer look and prepare your vehicle for fresh, high-quality tinting.",
-    "image": "/ServicesCars/car5.webp",
-    "buttonText": "Old Tint Removal",
-    "link": "/services/old-tint-removal"
   },{
     
     "id": "custom-logos-decals",
