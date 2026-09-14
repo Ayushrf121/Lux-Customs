@@ -7,10 +7,10 @@ const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KE
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { fullName, phone, message, terms } = body;
+    const { fullName, email, phone, message, terms } = body;
 
     // Server-side validation check
-    if (!fullName || !phone || !message || !terms) {
+    if (!fullName || !email || !phone || !message || !terms) {
       return NextResponse.json(
         { success: false, error: 'Please fill in all required fields and accept the terms.' },
         { status: 400 }
@@ -20,13 +20,14 @@ export async function POST(request) {
     // If Resend API key is configured, send actual email
     if (resend) {
       await resend.emails.send({
-        from: 'Auto TintGard Website <onboarding@resend.dev>', // Update with your verified domain in production
-        to: ['dummyayush121@gmail.com'],// Replace with your actual recipient email.
+        from: 'Lux Customs Website <onboarding@resend.dev>', // Update with your verified domain in production
+        to: ['dummyayush121@gmail.com'], // Replace with your actual recipient email.
         subject: `New Quote Request from ${fullName}`,
         html: `
           <div style="font-family: Arial, sans-serif; padding: 20px; background: #f4f4f4; border-radius: 10px;">
-            <h2 style="color: #1e40af;">New Quote Request - Auto TintGard</h2>
+            <h2 style="color: #1e40af;">New Quote Request - Lux Customs</h2>
             <p><strong>Full Name:</strong> ${fullName}</p>
+            <p><strong>Email Address:</strong> ${email}</p>
             <p><strong>Phone:</strong> ${phone}</p>
             <p><strong>Message:</strong></p>
             <p style="background: #ffffff; padding: 15px; border-radius: 5px; border: 1px solid #ddd;">${message}</p>
@@ -36,7 +37,7 @@ export async function POST(request) {
     } else {
       // Fallback console log for local development testing without API key
       console.log('--- MOCK EMAIL SENT ---');
-      console.log({ fullName, phone, message, timestamp: new Date().toISOString() });
+      console.log({ fullName, email, phone, message, timestamp: new Date().toISOString() });
     }
 
     return NextResponse.json(
@@ -46,7 +47,7 @@ export async function POST(request) {
   } catch (error) {
     console.error('Contact Form Error:', error);
     return NextResponse.json(
-      { success: false, error: 'Failed to send message. Please try calling us directly at 0483 955 426.' },
+      { success: false, error: 'Failed to send message. Please try calling us directly at 0468 317 131.' },
       { status: 500 }
     );
   }

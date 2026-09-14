@@ -7,15 +7,14 @@ import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Sparkles, CheckCircle2, AlertCircle, Send, Loader2 } from 'lucide-react';
 import { fadeInFromBottom, staggerContainer } from '../utils/animation';
 
-// List of common country codes
 const countryCodes = [
-  { code: '+61', country: 'AU' },
-  { code: '+1', country: 'US/CA' },
-  { code: '+44', country: 'UK' },
-  { code: '+91', country: 'IN' },
-  { code: '+64', country: 'NZ' },
-  { code: '+49', country: 'DE' },
-  { code: '+81', country: 'JP' },
+  { code: '+61', country: 'AU (+61)' },
+  { code: '+1', country: 'US/CA (+1)' },
+  { code: '+44', country: 'UK (+44)' },
+  { code: '+91', country: 'IN (+91)' },
+  { code: '+64', country: 'NZ (+64)' },
+  { code: '+49', country: 'DE (+49)' },
+  { code: '+81', country: 'JP (+81)' },
 ];
 
 export default function ContactSection() {
@@ -29,7 +28,7 @@ export default function ContactSection() {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      countryCode: '+61', // Default to Australia based on your location
+      countryCode: '+61',
     }
   });
 
@@ -37,7 +36,6 @@ export default function ContactSection() {
     setSubmitting(true);
     setStatusMessage({ type: '', text: '' });
 
-    // Combine country code and phone number if needed for your backend
     const payload = {
       ...data,
       phone: `${data.countryCode} ${data.phone}`,
@@ -50,7 +48,7 @@ export default function ContactSection() {
           type: 'success',
           text: response.data.message || 'Message sent successfully! We will be in touch shortly.',
         });
-        reset(); // Clear form fields
+        reset();
       }
     } catch (error) {
       const errorMsg = error.response?.data?.error || 'Network error. Please check your connection or call us directly.';
@@ -63,12 +61,10 @@ export default function ContactSection() {
   return (
     <section className="py-24 bg-zinc-950 relative overflow-hidden">
       
-      {/* Background Accent Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header */}
         <motion.div 
           className="text-center max-w-3xl mx-auto mb-16 space-y-4"
           initial="hidden"
@@ -87,7 +83,6 @@ export default function ContactSection() {
             <span>Get In Touch</span>
           </motion.div>
 
-          {/* Main Headline with Blue Gradient Effect */}
           <motion.h2 
             variants={fadeInFromBottom} 
             custom={0.2}
@@ -97,10 +92,8 @@ export default function ContactSection() {
           </motion.h2>
         </motion.div>
 
-        {/* Main Split Grid Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-zinc-900/60 border border-zinc-800/80 rounded-3xl p-8 sm:p-12 backdrop-blur-sm shadow-2xl">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-zinc-900/60 border border-zinc-800/80 rounded-3xl p-6 sm:p-12 backdrop-blur-sm shadow-2xl">
           
-          {/* Left Column: Contact Details & Google Map */}
           <motion.div 
             className="lg:col-span-5 space-y-8"
             initial="hidden"
@@ -113,7 +106,7 @@ export default function ContactSection() {
               
               <div className="space-y-4">
                 <a href="tel:0468317131" className="flex items-center space-x-4 text-zinc-300 hover:text-blue-400 transition-colors group">
-                  <div className="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform flex-shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
@@ -123,12 +116,12 @@ export default function ContactSection() {
                 </a>
 
                 <a href="mailto:sales@autotintgard.com.au" className="flex items-center space-x-4 text-zinc-300 hover:text-blue-400 transition-colors group">
-                  <div className="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform flex-shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
-                  <div>
+                  <div className="overflow-hidden">
                     <p className="text-xs text-zinc-500 uppercase tracking-wider">Email Us</p>
-                    <p className="font-semibold text-white">sales@autotintgard.com.au</p>
+                    <p className="font-semibold text-white truncate">sales@autotintgard.com.au</p>
                   </div>
                 </a>
 
@@ -144,7 +137,6 @@ export default function ContactSection() {
               </div>
             </div>
 
-            {/* Google Maps Embedded Widget */}
             <div className="rounded-2xl overflow-hidden border border-zinc-800 shadow-lg h-72 w-full relative">
               <iframe
                 title="Lux Customs Location Map"
@@ -158,9 +150,8 @@ export default function ContactSection() {
             </div>
           </motion.div>
 
-          {/* Right Column: React Hook Form */}
           <motion.div 
-            className="lg:col-span-7 bg-zinc-950/80 border border-zinc-800/80 rounded-2xl p-8 sm:p-10 shadow-xl"
+            className="lg:col-span-7 bg-zinc-950/80 border border-zinc-800/80 rounded-2xl p-6 sm:p-10 shadow-xl"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -168,7 +159,6 @@ export default function ContactSection() {
           >
             <h3 className="text-2xl font-bold text-white mb-6">Send Us a Message</h3>
 
-            {/* Success Banner Notice */}
             {statusMessage.type === 'success' && (
               <motion.div 
                 initial={{ opacity: 0, y: -10 }}
@@ -180,7 +170,6 @@ export default function ContactSection() {
               </motion.div>
             )}
 
-            {/* Error Banner Notice */}
             {statusMessage.type === 'error' && (
               <motion.div 
                 initial={{ opacity: 0, y: -10 }}
@@ -194,7 +183,6 @@ export default function ContactSection() {
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               
-              {/* Full Name Field */}
               <div>
                 <label className="block text-sm font-medium text-zinc-300 mb-2">
                   Full Name *
@@ -203,71 +191,84 @@ export default function ContactSection() {
                   type="text"
                   placeholder="John Smith"
                   {...register("fullName", { required: "Full name is required" })}
-                  className="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500 transition-colors"
+                  className="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500 transition-colors text-sm sm:text-base"
                 />
                 {errors.fullName && <p className="text-rose-500 text-xs mt-1">{errors.fullName.message}</p>}
               </div>
 
-              {/* Phone Field with Country Code Dropdown */}
               <div>
                 <label className="block text-sm font-medium text-zinc-300 mb-2">
-                  Phone *
+                  Email Address *
                 </label>
-                <div className="flex gap-2">
-                  {/* Country Code Select Dropdown */}
+                <input 
+                  type="email"
+                  placeholder="john@example.com"
+                  {...register("email", { 
+                    required: "Email address is required",
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: "Invalid email address format"
+                    }
+                  })}
+                  className="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500 transition-colors text-sm sm:text-base"
+                />
+                {errors.email && <p className="text-rose-500 text-xs mt-1">{errors.email.message}</p>}
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-zinc-300 mb-2">
+                  Phone Number *
+                </label>
+                <div className="grid grid-cols-1 sm:grid-cols-12 gap-2">
                   <select
                     {...register("countryCode")}
-                    className="bg-zinc-900 border border-zinc-800 rounded-xl px-3 py-3.5 text-white focus:outline-none focus:border-blue-500 transition-colors text-sm cursor-pointer"
+                    className="sm:col-span-4 bg-zinc-900 border border-zinc-800 rounded-xl px-3 py-3.5 text-white focus:outline-none focus:border-blue-500 transition-colors text-sm cursor-pointer"
                   >
                     {countryCodes.map((item) => (
                       <option key={item.code} value={item.code} className="bg-zinc-900 text-white">
-                        {item.country} ({item.code})
+                        {item.country}
                       </option>
                     ))}
                   </select>
 
-                  {/* Phone Number Input */}
                   <input 
                     type="tel"
                     placeholder="4xx xxx xxx"
                     {...register("phone", { required: "Phone number is required" })}
-                    className="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500 transition-colors"
+                    className="sm:col-span-8 w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500 transition-colors text-sm sm:text-base"
                   />
                 </div>
                 {errors.phone && <p className="text-rose-500 text-xs mt-1">{errors.phone.message}</p>}
               </div>
 
-              {/* Message Field */}
               <div>
                 <label className="block text-sm font-medium text-zinc-300 mb-2">
                   Short message about your needs *
                 </label>
                 <textarea 
                   rows={4}
-                  placeholder="Your message goes straight to my phone, I'll get back to you as soon as I'm available"
+                  placeholder="Tell us about your vehicle and services needed..."
                   {...register("message", { required: "Message is required" })}
-                  className="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                  className="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500 transition-colors resize-none text-sm sm:text-base"
                 />
                 {errors.message && <p className="text-rose-500 text-xs mt-1">{errors.message.message}</p>}
               </div>
 
-              {/* Terms Checkbox */}
               <div>
                 <div className="flex items-start space-x-3">
                   <input 
                     type="checkbox"
-                    id="terms"
+                    id="terms-section"
                     {...register("terms", { required: "You must agree to the terms and conditions" })}
-                    className="mt-1 w-4 h-4 rounded bg-zinc-900 border-zinc-700 text-blue-600 focus:ring-blue-500 cursor-pointer"
+                    className="mt-1 w-4 h-4 rounded bg-zinc-900 border-zinc-700 text-blue-600 focus:ring-blue-500 cursor-pointer flex-shrink-0"
                   />
-                  <label htmlFor="terms" className="text-xs text-zinc-400 leading-relaxed cursor-pointer">
+                  <label htmlFor="terms-section" className="text-xs text-zinc-400 leading-relaxed cursor-pointer">
                     I agree to <a href="/terms" className="text-blue-400 underline">terms & conditions</a> provided by the company. By providing my phone number, I agree to receive text messages from the business.
                   </label>
                 </div>
                 {errors.terms && <p className="text-rose-500 text-xs mt-1">{errors.terms.message}</p>}
               </div>
 
-              {/* Submit Button with Loading Spinner */}
               <button 
                 type="submit"
                 disabled={submitting}

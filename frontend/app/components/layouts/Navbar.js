@@ -72,14 +72,14 @@ export default function Navbar() {
                             Gallery
                         </Link>
 
-                        {/* Service Areas Dropdown */}
+                        {/* Service Area Single Link / Dropdown */}
                         <div
                             className="relative"
                             onMouseEnter={() => setAreasOpen(true)}
                             onMouseLeave={() => setAreasOpen(false)}
                         >
                             <button className="flex items-center text-zinc-300 hover:text-blue-500 font-medium transition-colors py-2">
-                                Service Areas
+                                Service Area
                                 <ChevronDown
                                     className={`w-4 h-4 ml-1 transition-transform duration-300 ${
                                         areasOpen ? 'rotate-180 text-blue-500' : 'rotate-0'
@@ -88,12 +88,10 @@ export default function Navbar() {
                             </button>
 
                             {areasOpen && (
-                                <div className="absolute top-full left-0 w-48 bg-zinc-900 border border-zinc-800 rounded-lg shadow-xl py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                                    <Link href="/areas/werribee" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Werribee</Link>
-                                    <Link href="/areas/wyndham-vale" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Wyndham Vale</Link>
-                                    <Link href="/areas/tarneit" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Tarneit</Link>
-                                    <Link href="/areas/truganina" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Truganina</Link>
-                                    <Link href="/areas/point-cook" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Point Cook</Link>
+                                <div className="absolute top-full left-0 w-52 bg-zinc-900 border border-zinc-800 rounded-lg shadow-xl py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                                    <Link href="/areas/endeavour-hills" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">
+                                        Endeavour Hills
+                                    </Link>
                                 </div>
                             )}
                         </div>
@@ -167,12 +165,10 @@ export default function Navbar() {
                     </Link>
 
                     <div className="py-2 text-zinc-300 font-medium border-t border-zinc-800 pt-3">
-                        <p className="text-blue-500 mb-1 text-sm uppercase tracking-wider">Service Areas</p>
-                        <Link href="/areas/werribee" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Werribee</Link>
-                        <Link href="/areas/wyndham-vale" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Wyndham Vale</Link>
-                        <Link href="/areas/tarneit" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Tarneit</Link>
-                        <Link href="/areas/truganina" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Truganina</Link>
-                        <Link href="/areas/point-cook" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Point Cook</Link>
+                        <p className="text-blue-500 mb-1 text-sm uppercase tracking-wider">Service Area</p>
+                        <Link href="/areas/endeavour-hills" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">
+                            Endeavour Hills
+                        </Link>
                     </div>
 
                     <Link

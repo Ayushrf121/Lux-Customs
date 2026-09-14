@@ -4,20 +4,20 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Sparkles, CheckCircle2, AlertCircle, Send, Loader2,} from 'lucide-react';
+import { Phone, Mail, MapPin, Sparkles, CheckCircle2, AlertCircle, Send, Loader2 } from 'lucide-react';
 import Instagram from '../components/icons/InstagramIcon';
 import Facebook from '../components/icons/FacebookIcon';
 import { fadeInFromBottom, staggerContainer } from '../components/utils/animation';
 
 // List of common country codes
 const countryCodes = [
-  { code: '+61', country: 'AU' },
-  { code: '+1', country: 'US/CA' },
-  { code: '+44', country: 'UK' },
-  { code: '+91', country: 'IN' },
-  { code: '+64', country: 'NZ' },
-  { code: '+49', country: 'DE' },
-  { code: '+81', country: 'JP' },
+  { code: '+61', country: 'AU (+61)' },
+  { code: '+1', country: 'US/CA (+1)' },
+  { code: '+44', country: 'UK (+44)' },
+  { code: '+91', country: 'IN (+91)' },
+  { code: '+64', country: 'NZ (+64)' },
+  { code: '+49', country: 'DE (+49)' },
+  { code: '+81', country: 'JP (+81)' },
 ];
 
 export default function ContactPage() {
@@ -105,7 +105,7 @@ export default function ContactPage() {
         </motion.div>
 
         {/* Main Split Grid Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-zinc-900/60 border border-zinc-800/80 rounded-3xl p-8 sm:p-12 backdrop-blur-sm shadow-2xl">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-zinc-900/60 border border-zinc-800/80 rounded-3xl p-6 sm:p-12 backdrop-blur-sm shadow-2xl">
           
           {/* Left Column: Contact Details, Socials & Google Map */}
           <motion.div 
@@ -120,7 +120,7 @@ export default function ContactPage() {
               
               <div className="space-y-4">
                 <a href="tel:0468317131" className="flex items-center space-x-4 text-zinc-300 hover:text-blue-400 transition-colors group">
-                  <div className="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform flex-shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
@@ -130,12 +130,12 @@ export default function ContactPage() {
                 </a>
 
                 <a href="mailto:sales@autotintgard.com.au" className="flex items-center space-x-4 text-zinc-300 hover:text-blue-400 transition-colors group">
-                  <div className="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform flex-shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
-                  <div>
+                  <div className="overflow-hidden">
                     <p className="text-xs text-zinc-500 uppercase tracking-wider">Email Us</p>
-                    <p className="font-semibold text-white">sales@autotintgard.com.au</p>
+                    <p className="font-semibold text-white truncate">sales@autotintgard.com.au</p>
                   </div>
                 </a>
 
@@ -150,7 +150,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Social Links Integration (Instagram & Facebook) */}
+              {/* Social Links Integration */}
               <div className="pt-4 border-t border-zinc-800 space-y-3">
                 <p className="text-xs text-zinc-500 uppercase tracking-wider font-semibold">Connect With Us</p>
                 <div className="flex items-center space-x-4">
@@ -190,7 +190,7 @@ export default function ContactPage() {
 
           {/* Right Column: React Hook Form */}
           <motion.div 
-            className="lg:col-span-7 bg-zinc-950/80 border border-zinc-800/80 rounded-2xl p-8 sm:p-10 shadow-xl"
+            className="lg:col-span-7 bg-zinc-950/80 border border-zinc-800/80 rounded-2xl p-6 sm:p-10 shadow-xl"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -233,24 +233,44 @@ export default function ContactPage() {
                   type="text"
                   placeholder="John Smith"
                   {...register("fullName", { required: "Full name is required" })}
-                  className="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500 transition-colors"
+                  className="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500 transition-colors text-sm sm:text-base"
                 />
                 {errors.fullName && <p className="text-rose-500 text-xs mt-1">{errors.fullName.message}</p>}
               </div>
 
-              {/* Phone Field with Country Code Dropdown */}
+              {/* Email Address Field */}
               <div>
                 <label className="block text-sm font-medium text-zinc-300 mb-2">
-                  Phone *
+                  Email Address *
                 </label>
-                <div className="flex gap-2">
+                <input 
+                  type="email"
+                  placeholder="john@example.com"
+                  {...register("email", { 
+                    required: "Email address is required",
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: "Invalid email address format"
+                    }
+                  })}
+                  className="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500 transition-colors text-sm sm:text-base"
+                />
+                {errors.email && <p className="text-rose-500 text-xs mt-1">{errors.email.message}</p>}
+              </div>
+
+              {/* Phone Field with Mobile-Friendly Layout */}
+              <div>
+                <label className="block text-sm font-medium text-zinc-300 mb-2">
+                  Phone Number *
+                </label>
+                <div className="grid grid-cols-1 sm:grid-cols-12 gap-2">
                   <select
                     {...register("countryCode")}
-                    className="bg-zinc-900 border border-zinc-800 rounded-xl px-3 py-3.5 text-white focus:outline-none focus:border-blue-500 transition-colors text-sm cursor-pointer"
+                    className="sm:col-span-4 bg-zinc-900 border border-zinc-800 rounded-xl px-3 py-3.5 text-white focus:outline-none focus:border-blue-500 transition-colors text-sm cursor-pointer"
                   >
                     {countryCodes.map((item) => (
                       <option key={item.code} value={item.code} className="bg-zinc-900 text-white">
-                        {item.country} ({item.code})
+                        {item.country}
                       </option>
                     ))}
                   </select>
@@ -259,7 +279,7 @@ export default function ContactPage() {
                     type="tel"
                     placeholder="4xx xxx xxx"
                     {...register("phone", { required: "Phone number is required" })}
-                    className="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500 transition-colors"
+                    className="sm:col-span-8 w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500 transition-colors text-sm sm:text-base"
                   />
                 </div>
                 {errors.phone && <p className="text-rose-500 text-xs mt-1">{errors.phone.message}</p>}
@@ -272,9 +292,9 @@ export default function ContactPage() {
                 </label>
                 <textarea 
                   rows={4}
-                  placeholder="Your message goes straight to my phone, I'll get back to you as soon as I'm available"
+                  placeholder="Tell us about your vehicle and services needed..."
                   {...register("message", { required: "Message is required" })}
-                  className="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                  className="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500 transition-colors resize-none text-sm sm:text-base"
                 />
                 {errors.message && <p className="text-rose-500 text-xs mt-1">{errors.message.message}</p>}
               </div>
@@ -286,7 +306,7 @@ export default function ContactPage() {
                     type="checkbox"
                     id="terms"
                     {...register("terms", { required: "You must agree to the terms and conditions" })}
-                    className="mt-1 w-4 h-4 rounded bg-zinc-900 border-zinc-700 text-blue-600 focus:ring-blue-500 cursor-pointer"
+                    className="mt-1 w-4 h-4 rounded bg-zinc-900 border-zinc-700 text-blue-600 focus:ring-blue-500 cursor-pointer flex-shrink-0"
                   />
                   <label htmlFor="terms" className="text-xs text-zinc-400 leading-relaxed cursor-pointer">
                     I agree to <a href="/terms" className="text-blue-400 underline">terms & conditions</a> provided by the company. By providing my phone number, I agree to receive text messages from the business.
