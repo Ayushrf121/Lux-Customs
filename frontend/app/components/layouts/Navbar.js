@@ -138,7 +138,7 @@ export default function Navbar() {
             {/* Mobile Full-Screen Menu */}
             {mobileMenuOpen && (
                 <div
-                    className="lg:hidden fixed inset-x-0 top-20 bottom-0 h-[calc(100vh-5rem)] h-[calc(100dvh-5rem)] bg-zinc-900 z-40 overflow-y-auto px-4 pt-2 pb-6 space-y-3"
+                    className="lg:hidden fixed inset-x-0 top-[4.5rem] bottom-0 h-[calc(100vh-5rem)] h-[calc(100dvh-5rem)] bg-zinc-900 z-40 overflow-y-auto px-4 pt-2 pb-6 space-y-3"
                 >
                     <Link
                         href="/"
