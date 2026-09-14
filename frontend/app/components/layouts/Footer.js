@@ -102,8 +102,8 @@ export default function Footer() {
               </div>
 
               <div>
-                <a href="mailto:sales@luxcustoms.com.au" className="hover:text-blue-400 transition-colors block">
-                  sales@luxcustoms.com.au
+                <a href="mailto:luxcustoms.au@gmail.com" className="hover:text-blue-400 transition-colors block">
+                  luxcustoms.au@gmail.com
                 </a>
                 <p className="text-zinc-400 mt-0.5">
                   85 Kennington Park Dr, Endeavour Hills VIC 3802, Australia

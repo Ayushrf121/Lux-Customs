@@ -21,7 +21,7 @@ export async function POST(request) {
     if (resend) {
       await resend.emails.send({
         from: 'Lux Customs Website <onboarding@resend.dev>', // Update with your verified domain in production
-        to: ['dummyayush121@gmail.com'], // Replace with your actual recipient email.
+        to: ['luxcustoms.au@gmail.com'], // Replace with your actual recipient email.
         subject: `New Quote Request from ${fullName}`,
         html: `
           <div style="font-family: Arial, sans-serif; padding: 20px; background: #f4f4f4; border-radius: 10px;">

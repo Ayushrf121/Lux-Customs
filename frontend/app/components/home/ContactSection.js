@@ -115,13 +115,13 @@ export default function ContactSection() {
                   </div>
                 </a>
 
-                <a href="mailto:sales@autotintgard.com.au" className="flex items-center space-x-4 text-zinc-300 hover:text-blue-400 transition-colors group">
+                <a href="mailto:luxcustoms.au@gmail.com" className="flex items-center space-x-4 text-zinc-300 hover:text-blue-400 transition-colors group">
                   <div className="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform flex-shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div className="overflow-hidden">
                     <p className="text-xs text-zinc-500 uppercase tracking-wider">Email Us</p>
-                    <p className="font-semibold text-white truncate">sales@autotintgard.com.au</p>
+                    <p className="font-semibold text-white truncate">luxcustoms.au@gmail.com</p>
                   </div>
                 </a>
 
