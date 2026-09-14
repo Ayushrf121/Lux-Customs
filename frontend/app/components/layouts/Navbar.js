@@ -17,10 +17,10 @@ export default function Navbar() {
 
                     {/* 1. Logo */}
                     <div className="flex-shrink-0">
-                        <Link href="/" className="flex items-center">
+                        <Link href="/" className="flex items-center" onClick={() => setMobileMenuOpen(false)}>
                             <Image
                                 src="/Requirements/logo (3).png"
-                                alt="Auto TintGard Logo"
+                                alt="Lux Customs Logo"
                                 width={150}
                                 height={140}
                                 className="object-contain"
@@ -108,7 +108,6 @@ export default function Navbar() {
 
                     {/* 3. Right Side Buttons (Phone & Quote) */}
                     <div className="hidden lg:flex items-center space-x-4">
-                        {/* Phone Number CTA Button */}
                         <a
                             href="tel:0468317131"
                             className="flex items-center space-x-2 bg-white text-zinc-950 px-4 py-2.5 rounded-md font-semibold hover:bg-zinc-200 transition-colors shadow-sm"
@@ -117,7 +116,6 @@ export default function Navbar() {
                             <span>0468 317 131</span>
                         </a>
 
-                        {/* Get Free Quote Button */}
                         <Link
                             href="/contact"
                             className="bg-blue-600 text-white px-5 py-2.5 rounded-md font-semibold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/20"
@@ -142,33 +140,63 @@ export default function Navbar() {
             {/* Mobile Slide-down Menu */}
             {mobileMenuOpen && (
                 <div className="lg:hidden bg-zinc-900 border-b border-zinc-800 px-4 pt-2 pb-6 space-y-3">
-                    <Link href="/" className="block py-2 text-zinc-300 hover:text-blue-500 font-medium">Home</Link>
+                    <Link 
+                        href="/" 
+                        onClick={() => setMobileMenuOpen(false)} 
+                        className="block py-2 text-zinc-300 hover:text-blue-500 font-medium"
+                    >
+                        Home
+                    </Link>
+
                     <div className="py-2 text-zinc-300 font-medium border-t border-zinc-800 pt-3">
                         <p className="text-blue-500 mb-1 text-sm uppercase tracking-wider">Services</p>
-                        <Link href="/services/window-tinting" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Window Tinting</Link>
-                        <Link href="/services/tint-removal" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Tint Removal</Link>
-                        <Link href="/services/ceramic-coating" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Ceramic Coating</Link>
-                        <Link href="/services/paint-protection-film" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Paint Protection Film (PPF)</Link>
-                        <Link href="/services/vinyl-wrapping" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Vinyl Wrapping</Link>
-                        <Link href="/services/custom-logos-decals" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Custom Logos/Decals</Link>
+                        <Link href="/services/window-tinting" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Window Tinting</Link>
+                        <Link href="/services/tint-removal" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Tint Removal</Link>
+                        <Link href="/services/ceramic-coating" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Ceramic Coating</Link>
+                        <Link href="/services/paint-protection-film" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Paint Protection Film (PPF)</Link>
+                        <Link href="/services/vinyl-wrapping" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Vinyl Wrapping</Link>
+                        <Link href="/services/custom-logos-decals" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Custom Logos/Decals</Link>
                     </div>
-                    <Link href="/gallery" className="block py-2 text-zinc-300 hover:text-blue-500 font-medium border-t border-zinc-800 pt-3">Gallery</Link>
+
+                    <Link 
+                        href="/gallery" 
+                        onClick={() => setMobileMenuOpen(false)} 
+                        className="block py-2 text-zinc-300 hover:text-blue-500 font-medium border-t border-zinc-800 pt-3"
+                    >
+                        Gallery
+                    </Link>
+
                     <div className="py-2 text-zinc-300 font-medium border-t border-zinc-800 pt-3">
                         <p className="text-blue-500 mb-1 text-sm uppercase tracking-wider">Service Areas</p>
-                        <Link href="/areas/werribee" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Werribee</Link>
-                        <Link href="/areas/wyndham-vale" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Wyndham Vale</Link>
-                        <Link href="/areas/tarneit" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Tarneit</Link>
-                        <Link href="/areas/truganina" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Truganina</Link>
-                        <Link href="/areas/point-cook" className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Point Cook</Link>
+                        <Link href="/areas/werribee" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Werribee</Link>
+                        <Link href="/areas/wyndham-vale" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Wyndham Vale</Link>
+                        <Link href="/areas/tarneit" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Tarneit</Link>
+                        <Link href="/areas/truganina" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Truganina</Link>
+                        <Link href="/areas/point-cook" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Point Cook</Link>
                     </div>
-                    <Link href="/contact" className="block py-2 text-zinc-300 hover:text-blue-500 font-medium border-t border-zinc-800 pt-3">Contact</Link>
+
+                    <Link 
+                        href="/contact" 
+                        onClick={() => setMobileMenuOpen(false)} 
+                        className="block py-2 text-zinc-300 hover:text-blue-500 font-medium border-t border-zinc-800 pt-3"
+                    >
+                        Contact
+                    </Link>
 
                     <div className="pt-4 flex flex-col space-y-3 border-t border-zinc-800">
-                        <a href="tel:0468317131" className="flex items-center justify-center space-x-2 bg-zinc-800 text-white py-2.5 rounded-md font-semibold">
+                        <a 
+                            href="tel:0468317131" 
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="flex items-center justify-center space-x-2 bg-zinc-800 text-white py-2.5 rounded-md font-semibold"
+                        >
                             <Phone className="w-4 h-4 text-blue-500" />
                             <span>0468 317 131</span>
                         </a>
-                        <Link href="/contact" className="text-center bg-blue-600 text-white py-2.5 rounded-md font-semibold hover:bg-blue-700">
+                        <Link 
+                            href="/contact" 
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="text-center bg-blue-600 text-white py-2.5 rounded-md font-semibold hover:bg-blue-700"
+                        >
                             Get Free Quote
                         </Link>
                     </div>
