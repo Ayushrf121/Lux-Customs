@@ -25,7 +25,7 @@ export default function Navbar() {
                     <div className="flex-shrink-0">
                         <Link href="/" className="flex items-center" onClick={() => setMobileMenuOpen(false)}>
                             <Image
-                                src="/Requirements/logo (3).png"
+                                src="/Requirements/navLogo.png"
                                 alt="Lux Customs Logo"
                                 width={130}
                                 height={120}

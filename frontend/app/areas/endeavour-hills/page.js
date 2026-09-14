@@ -3,27 +3,28 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { MapPin, ShieldCheck, Sparkles, Phone, ArrowRight, CheckCircle2, Clock, Award } from 'lucide-react';
+import { MapPin, ShieldCheck, Sparkles, Phone, ArrowRight, CheckCircle2, Clock, Award, Divide } from 'lucide-react';
 import { fadeInFromBottom, staggerContainer } from '../../components/utils/animation';
+import Divider from '@/app/components/utils/Divider';
 
 export default function EndeavourHillsAreaPage() {
   return (
     <div className="bg-zinc-950 text-zinc-300 min-h-screen relative overflow-hidden">
-      
+
       {/* Background Ambient Glow Effects */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[1200px] h-[600px] bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 right-10 w-[500px] h-[500px] bg-cyan-600/5 rounded-full blur-3xl pointer-events-none" />
 
       {/* Hero Section */}
       <section className="relative pt-36 pb-24 px-4 sm:px-6 lg:px-8 border-b border-zinc-900">
-        <motion.div 
+        <motion.div
           className="max-w-4xl mx-auto text-center space-y-8 relative z-10"
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
         >
-          <motion.div 
-            variants={fadeInFromBottom} 
+          <motion.div
+            variants={fadeInFromBottom}
             custom={0}
             animate={{ y: [0, -6, 0] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -33,37 +34,37 @@ export default function EndeavourHillsAreaPage() {
             <span>South East Melbourne Flagship Studio</span>
           </motion.div>
 
-          <motion.h1 
-            variants={fadeInFromBottom} 
+          <motion.h1
+            variants={fadeInFromBottom}
             custom={0.2}
             className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.1]"
           >
             Elite Vehicle Styling in <span className="bg-gradient-to-r from-white via-blue-200 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_2px_15px_rgba(59,130,246,0.4)]">Endeavour Hills</span>
           </motion.h1>
 
-          <motion.p 
-            variants={fadeInFromBottom} 
+          <motion.p
+            variants={fadeInFromBottom}
             custom={0.4}
             className="text-lg sm:text-xl text-zinc-400 leading-relaxed max-w-3xl mx-auto"
           >
             Conveniently located right at <strong className="text-white">85 Kennington Park Dr</strong>, Lux Customs is South East Melbourne’s trusted destination for precision window tinting, paint protection films, and full aesthetic wraps.
           </motion.p>
 
-          <motion.div 
-            variants={fadeInFromBottom} 
+          <motion.div
+            variants={fadeInFromBottom}
             custom={0.6}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
           >
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="group inline-flex items-center justify-center bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-blue-600/30 hover:scale-105"
             >
               <span>Book Your Vehicle Today</span>
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
 
-            <a 
-              href="tel:0468317131" 
+            <a
+              href="tel:0468317131"
               className="inline-flex items-center justify-center space-x-3 bg-zinc-900 hover:bg-zinc-800 text-white font-semibold px-8 py-4 rounded-xl border border-zinc-700 backdrop-blur-md transition-all duration-300 hover:scale-105"
             >
               <Phone className="w-4 h-4 text-blue-400" />
@@ -72,7 +73,7 @@ export default function EndeavourHillsAreaPage() {
           </motion.div>
         </motion.div>
       </section>
-
+      <Divider />
       {/* Studio Location Highlights Grid */}
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -104,7 +105,7 @@ export default function EndeavourHillsAreaPage() {
           ].map((item, idx) => {
             const Icon = item.icon;
             return (
-              <motion.div 
+              <motion.div
                 key={idx}
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.3 }}
@@ -120,7 +121,7 @@ export default function EndeavourHillsAreaPage() {
           })}
         </div>
       </section>
-
+      <Divider />
       {/* Services Available in this Area */}
       <section className="py-24 bg-zinc-900/30 border-y border-zinc-900 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -142,8 +143,8 @@ export default function EndeavourHillsAreaPage() {
               { name: "Tint Removal", link: "/services/tint-removal", desc: "Clean bubble or purple tint extraction without glass damage." },
               { name: "Custom Logos & Decals", link: "/services/custom-logos-decals", desc: "Fleet branding, track numbers, and precision die-cut graphics." }
             ].map((srv, idx) => (
-              <Link 
-                key={idx} 
+              <Link
+                key={idx}
                 href={srv.link}
                 className="bg-zinc-950 border border-zinc-800/80 rounded-2xl p-6 space-y-3 hover:border-blue-500/50 transition-all group block shadow-lg"
               >
@@ -157,7 +158,7 @@ export default function EndeavourHillsAreaPage() {
           </div>
         </div>
       </section>
-
+      <Divider />
       {/* Call to Action Banner */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-12">
         <div className="bg-gradient-to-r from-blue-900/40 via-zinc-900 to-zinc-900 border border-blue-500/30 rounded-3xl p-8 sm:p-12 shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-8">
@@ -165,8 +166,8 @@ export default function EndeavourHillsAreaPage() {
             <h3 className="text-2xl sm:text-3xl font-extrabold text-white">Ready to elevate your car's look in South East Melbourne?</h3>
             <p className="text-zinc-400 text-sm">Visit our Endeavour Hills studio or request a fast online quote today.</p>
           </div>
-          <Link 
-            href="/contact" 
+          <Link
+            href="/contact"
             className="group inline-flex items-center justify-center bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-blue-600/30 hover:scale-105 flex-shrink-0"
           >
             <span>Get Free Quote Now</span>

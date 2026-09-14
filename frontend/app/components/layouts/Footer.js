@@ -113,7 +113,7 @@ export default function Footer() {
               {/* Hours of Operation */}
               <div className="pt-2 border-t border-zinc-900">
                 <p className="font-bold text-white uppercase tracking-wider mb-0.5">Hours of Operation</p>
-                <p className="text-zinc-400">Monday–Friday: 8:30 am–4:00 pm</p>
+                <p className="text-zinc-400">Monday–Friday: 8:30 am–6:00 pm</p>
               </div>
             </div>
           </motion.div>
