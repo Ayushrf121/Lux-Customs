@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Phone, ChevronDown, Menu, X } from 'lucide-react';
@@ -9,6 +9,12 @@ export default function Navbar() {
     const [servicesOpen, setServicesOpen] = useState(false);
     const [areasOpen, setAreasOpen] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+    // Lock background scroll when the full-screen mobile menu is open
+    useEffect(() => {
+        document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
+        return () => { document.body.style.overflow = ''; };
+    }, [mobileMenuOpen]);
 
     return (
         <header className="sticky top-0 z-50 bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800">
@@ -31,10 +37,7 @@ export default function Navbar() {
 
                     {/* 2. Desktop Navigation Links */}
                     <nav className="hidden lg:flex items-center space-x-8">
-                        <Link
-                            href="/"
-                            className="text-zinc-300 hover:text-blue-500 font-medium transition-colors"
-                        >
+                        <Link href="/" className="text-zinc-300 hover:text-blue-500 font-medium transition-colors">
                             Home
                         </Link>
 
@@ -65,10 +68,7 @@ export default function Navbar() {
                             )}
                         </div>
 
-                        <Link
-                            href="/gallery"
-                            className="text-zinc-300 hover:text-blue-500 font-medium transition-colors"
-                        >
+                        <Link href="/gallery" className="text-zinc-300 hover:text-blue-500 font-medium transition-colors">
                             Gallery
                         </Link>
 
@@ -98,10 +98,7 @@ export default function Navbar() {
                             )}
                         </div>
 
-                        <Link
-                            href="/contact"
-                            className="text-zinc-300 hover:text-blue-500 font-medium transition-colors"
-                        >
+                        <Link href="/contact" className="text-zinc-300 hover:text-blue-500 font-medium transition-colors">
                             Contact
                         </Link>
                     </nav>
@@ -128,7 +125,8 @@ export default function Navbar() {
                     <div className="lg:hidden flex items-center">
                         <button
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            className="text-zinc-300 hover:text-white p-2"
+                            className="text-zinc-300 hover:text-white p-2 relative z-[60]"
+                            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
                         >
                             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                         </button>
@@ -137,12 +135,14 @@ export default function Navbar() {
                 </div>
             </div>
 
-            {/* Mobile Slide-down Menu */}
+            {/* Mobile Full-Screen Menu */}
             {mobileMenuOpen && (
-                <div className="lg:hidden bg-zinc-900 border-b border-zinc-800 px-4 pt-2 pb-6 space-y-3">
-                    <Link 
-                        href="/" 
-                        onClick={() => setMobileMenuOpen(false)} 
+                <div
+                    className="lg:hidden fixed inset-x-0 top-20 bottom-0 h-[calc(100vh-5rem)] h-[calc(100dvh-5rem)] bg-zinc-900 z-40 overflow-y-auto px-4 pt-2 pb-6 space-y-3"
+                >
+                    <Link
+                        href="/"
+                        onClick={() => setMobileMenuOpen(false)}
                         className="block py-2 text-zinc-300 hover:text-blue-500 font-medium"
                     >
                         Home
@@ -158,9 +158,9 @@ export default function Navbar() {
                         <Link href="/services/custom-logos-decals" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Custom Logos/Decals</Link>
                     </div>
 
-                    <Link 
-                        href="/gallery" 
-                        onClick={() => setMobileMenuOpen(false)} 
+                    <Link
+                        href="/gallery"
+                        onClick={() => setMobileMenuOpen(false)}
                         className="block py-2 text-zinc-300 hover:text-blue-500 font-medium border-t border-zinc-800 pt-3"
                     >
                         Gallery
@@ -175,25 +175,25 @@ export default function Navbar() {
                         <Link href="/areas/point-cook" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Point Cook</Link>
                     </div>
 
-                    <Link 
-                        href="/contact" 
-                        onClick={() => setMobileMenuOpen(false)} 
+                    <Link
+                        href="/contact"
+                        onClick={() => setMobileMenuOpen(false)}
                         className="block py-2 text-zinc-300 hover:text-blue-500 font-medium border-t border-zinc-800 pt-3"
                     >
                         Contact
                     </Link>
 
                     <div className="pt-4 flex flex-col space-y-3 border-t border-zinc-800">
-                        <a 
-                            href="tel:0468317131" 
+                        <a
+                            href="tel:0468317131"
                             onClick={() => setMobileMenuOpen(false)}
                             className="flex items-center justify-center space-x-2 bg-zinc-800 text-white py-2.5 rounded-md font-semibold"
                         >
                             <Phone className="w-4 h-4 text-blue-500" />
                             <span>0468 317 131</span>
                         </a>
-                        <Link 
-                            href="/contact" 
+                        <Link
+                            href="/contact"
                             onClick={() => setMobileMenuOpen(false)}
                             className="text-center bg-blue-600 text-white py-2.5 rounded-md font-semibold hover:bg-blue-700"
                         >
