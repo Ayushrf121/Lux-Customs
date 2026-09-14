@@ -17,7 +17,7 @@ export const metadata = {
   title: "Lux Customs | Professional window tinting and paint protection",
   description: "Professional car window tinting and paint protection in Hoppers Crossing, Melbourne.",
   icons: {
-    icon: '/Requirements/logo.png', // Or /favicon.ico depending on what file you used
+    icon: '/Requirements/logo.png',
   },
 };
 
