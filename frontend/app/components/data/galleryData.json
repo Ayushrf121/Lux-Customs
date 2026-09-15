@@ -9,7 +9,7 @@
   {
     "id": 2,
     "title": "Custom Orange Performance Sedan",
-    "category": "Vinyl Wrap",
+    "category": "Custom Detailing",
     "image": "/Gallery/c2.jpeg",
     "description": "Vibrant custom color-matched wrap finish with precision edge tucking and custom side graphic decals."
   },
@@ -23,7 +23,7 @@
   {
     "id": 4,
     "title": "Pristine White Luxury Sedan",
-    "category": "PPF & Ceramic",
+    "category": "Ceramic Coating",
     "image": "/Gallery/c5.jpeg",
     "description": "Multi-layer nano-ceramic coating delivering an immaculate wet-look gloss and surface protection."
   },
@@ -37,7 +37,7 @@
   {
     "id": 6,
     "title": "Midnight Blue Track-Ready Build",
-    "category": "Vinyl Wrap",
+    "category": "Custom Detailing",
     "image": "/AboutUs/aboutCar.jpeg",
     "description": "Specialist wrap and aero component detailing executed inside the Lux Customs studio workspace."
   }

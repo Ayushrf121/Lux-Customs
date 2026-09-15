@@ -13,11 +13,11 @@ export default function Divider() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative w-full max-w-md h-[2px]"
       >
-        {/* Glowing Gradient Line */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent shadow-[0_0_15px_rgba(59,130,246,0.7)]" />
+        {/* Glowing Golden Gradient Line */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#BCAA8B] to-transparent shadow-[0_0_15px_rgba(188,170,139,0.6)]" />
         
-        {/* Core Bright Point */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-blue-400 shadow-[0_0_10px_#60a5fa] animate-pulse" />
+        {/* Core Bright Golden Point */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#d4c5a9] shadow-[0_0_10px_#BCAA8B] animate-pulse" />
       </motion.div>
     </div>
   );

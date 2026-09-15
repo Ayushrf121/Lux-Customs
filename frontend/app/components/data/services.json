@@ -8,6 +8,14 @@
     "link": "/services/window-tinting"
   },
   {
+    "id": "tint-removal",
+    "title": "Tint Removal",
+    "description": "Safely and efficiently remove old, bubbling, or peeling window tint without damaging your vehicle's glass or defroster lines. Restore a clean look and prepare your car for fresh application.",
+    "image": "/ServicesCars/tint-remove.jpeg",
+    "buttonText": "Tint Removal",
+    "link": "/services/tint-removal"
+  },
+  {
     "id": "ceramic-coating",
     "title": "Ceramic Coating",
     "description": "Protect your car's paint with our advanced ceramic coating services. This durable layer provides a high-gloss finish, repels dirt and water, and shields your vehicle from environmental contaminants, keeping it looking new for longer.",
@@ -16,27 +24,11 @@
     "link": "/services/ceramic-coating"
   },
   {
-    "id": "Paint-Protection-Film",
-    "title": "Paint Protection Film",
-    "description": "Shield your car's paint from scratches, chips, and environmental damage with our high-quality paint protection film. This durable solution maintains your vehicle's appearance and increases its resale value.",
-    "image": "/ServicesCars/car3.jpg",
-    "buttonText": "Paint Protection Film",
-    "link": "/services/paint-protection-film"
-  },
-  {
-    "id": "vinyl-wrapping",
-    "title": "Vinyl Wrapping",
-    "description": "Transform your vehicle's appearance with our professional vinyl wrapping services. We offer a wide range of colors and finishes to give your car a custom look that stands out.",
-    "image": "/ServicesCars/car4.jpg",
-    "buttonText": "Vinyl Wrapping",
-    "link": "/services/vinyl-wrapping"
-  },{
-    
-    "id": "custom-logos-decals",
-    "title": "Custom logos/decals",
-    "description": "Improve visibility and enhance your vehicle's appearance with our custom logo and decal services. We create unique designs that make your vehicle stand out.",
-    "image": "/ServicesCars/car6.jpg",
-    "buttonText": "Custom Logos/Decals",
-    "link": "/services/custom-logos-decals"
+    "id": "detailing",
+    "title": "Detailing & Protection",
+    "description": "Revitalize your car inside and out with our comprehensive detailing and protection services. We deeply clean, restore, and safeguard every surface to bring back that showroom finish.",
+    "image": "/ServicesCars/detailing.jpg",
+    "buttonText": "Detailing & Protection",
+    "link": "/services/detailing"
   }
 ]

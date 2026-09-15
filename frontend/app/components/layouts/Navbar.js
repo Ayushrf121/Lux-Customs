@@ -57,13 +57,19 @@ export default function Navbar() {
                             </button>
 
                             {servicesOpen && (
-                                <div className="absolute top-full left-0 w-60 bg-zinc-900 border border-zinc-800 rounded-lg shadow-xl py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                                    <Link href="/services/window-tinting" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Window Tinting</Link>
-                                    <Link href="/services/tint-removal" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Tint Removal</Link>
-                                    <Link href="/services/ceramic-coating" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Ceramic Coating</Link>
-                                    <Link href="/services/paint-protection-film" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Paint Protection Film (PPF)</Link>
-                                    <Link href="/services/vinyl-wrapping" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Vinyl Wrapping</Link>
-                                    <Link href="/services/custom-logos-decals" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">Custom Logos/Decals</Link>
+                                <div className="absolute top-full left-0 w-52 bg-zinc-900 border border-zinc-800 rounded-lg shadow-xl py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                                    <Link href="/services/window-tinting" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">
+                                        Window Tinting
+                                    </Link>
+                                    <Link href="/services/tint-removal" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">
+                                        Tint Removal
+                                    </Link>
+                                    <Link href="/services/ceramic-coating" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">
+                                        Ceramic Coating
+                                    </Link>
+                                    <Link href="/services/detailing" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">
+                                        Detailing & Protection
+                                    </Link>
                                 </div>
                             )}
                         </div>
@@ -151,9 +157,7 @@ export default function Navbar() {
                         <Link href="/services/window-tinting" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Window Tinting</Link>
                         <Link href="/services/tint-removal" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Tint Removal</Link>
                         <Link href="/services/ceramic-coating" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Ceramic Coating</Link>
-                        <Link href="/services/paint-protection-film" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Paint Protection Film (PPF)</Link>
-                        <Link href="/services/vinyl-wrapping" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Vinyl Wrapping</Link>
-                        <Link href="/services/custom-logos-decals" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Custom Logos/Decals</Link>
+                        <Link href="/services/detailing" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">Detailing & Protection</Link>
                     </div>
 
                     <Link

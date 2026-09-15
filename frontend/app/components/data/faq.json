@@ -16,17 +16,12 @@
   },
   {
     "id": 4,
-    "question": "What is Paint Protection Film (PPF), and do you install it?",
-    "answer": "Yes, we offer Paint Protection Film (PPF) installation. This is a durable, self-healing, transparent film designed to protect your car's high-impact areas (like the front bumper, hood, and fenders) from stone chips, scratches, and road debris."
+    "question": "What detailing services do you provide?",
+    "answer": "We offer comprehensive detailing services, including interior and exterior cleaning, polishing, waxing, and paint correction. Our goal is to restore your vehicle to its showroom condition."
   },
   {
     "id": 5,
-    "question": "Can I change my vehicle's color with vinyl wrapping?",
-    "answer": "Yes, we specialize in vinyl wrapping to completely transform your vehicle's appearance. Whether you want a full color change, a satin or matte finish, or a roof wrap, we use premium vinyl for a flawless, paint-like look."
-  },
-  {
-    "id": 6,
-    "question": "Do you do custom logos and decals?",
-    "answer": "Yes, we design and apply custom logos and decals for both personal styling and business branding. From commercial vehicle lettering to custom graphics, we bring your vision to life."
+    "question": "Do you do detailing for cars?",
+    "answer": "Yes, we specialize in car detailing services. Our team provides thorough cleaning, polishing, and protection for both the interior and exterior of your vehicle, ensuring it looks its best."
   }
 ]

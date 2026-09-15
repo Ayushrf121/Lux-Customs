@@ -12,7 +12,7 @@ export default function GalleryPage() {
   const [activeImage, setActiveImage] = useState(null);
 
   // Extract unique categories for filter buttons
-  const categories = ["All", "Vinyl Wrap", "PPF & Ceramic", "Window Tinting"];
+  const categories = ["All", "Ceramic Coating", "Window Tinting"];
 
   // Filter cars based on selected category
   const filteredCars = selectedCategory === "All" 
