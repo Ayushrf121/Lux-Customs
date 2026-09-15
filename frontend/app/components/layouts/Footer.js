@@ -32,7 +32,7 @@ export default function Footer() {
               <div className="relative w-20 h-20 overflow-hidden">
                 <Link href="/" className="flex items-center">
                   <Image
-                    src="/Requirements/logo (3).png"
+                    src="/Requirements/navLogo.png"
                     alt="Lux Customs Logo"
                     width={130}
                     height={120}
