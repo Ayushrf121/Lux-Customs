@@ -167,7 +167,7 @@ export default function Navbar() {
                     <div className="py-2 text-zinc-300 font-medium border-t border-zinc-800 pt-3">
                         <p className="text-blue-500 mb-1 text-sm uppercase tracking-wider">Service Area</p>
                         <Link href="/areas/endeavour-hills" onClick={() => setMobileMenuOpen(false)} className="block py-1.5 pl-3 text-sm text-zinc-400 hover:text-white">
-                            Endeavour Hills
+                            South East Melbourne 
                         </Link>
                     </div>
 
