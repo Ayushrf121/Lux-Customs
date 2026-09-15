@@ -90,7 +90,7 @@ export default function Navbar() {
                             {areasOpen && (
                                 <div className="absolute top-full left-0 w-52 bg-zinc-900 border border-zinc-800 rounded-lg shadow-xl py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                                     <Link href="/areas/endeavour-hills" className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-blue-600/10 hover:text-blue-400 transition-colors">
-                                        Endeavour Hills
+                                        South East Melbourne
                                     </Link>
                                 </div>
                             )}
