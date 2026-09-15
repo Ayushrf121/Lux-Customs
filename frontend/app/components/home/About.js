@@ -59,7 +59,7 @@ export default function About() {
               className="space-y-4 text-zinc-300 text-base sm:text-lg leading-relaxed"
             >
               <p>
-                Driven by precision and trusted craftsmanship, <span className="text-blue-400 font-bold underline">Lux Customs</span> brings elite automotive window tinting to Melbourne's west in Hoppers Crossing, setting a higher benchmark for vehicle styling and protection.
+                Driven by precision and trusted craftsmanship, <span className="text-blue-400 font-bold underline">Lux Customs</span> brings elite automotive window tinting to Melbourne's east in Hoppers Crossing, setting a higher benchmark for vehicle styling and protection.
               </p>
               <p>
                 We upgrade your drive with premium window films, advanced protective coatings, dash cam integrations, and expert old-tint extraction—safeguarding your vehicle from harsh UV rays while maximizing comfort and privacy.
