@@ -10,7 +10,7 @@ export default function ServicesSection() {
   const services = servicesData;
 
   return (
-    <section className="bg-zinc-950 py-20 px-4 sm:px-6 lg:px-8 text-white">
+    <section className="bg-zinc-950 py-20 px-4 sm:px-6 lg:px-8 text-white selection:bg-[#FBBF24] selection:text-zinc-950">
       <div className="max-w-7xl mx-auto space-y-24">
         {services.map((service, index) => {
           // Alternating layout: even items have image on left, odd on right
