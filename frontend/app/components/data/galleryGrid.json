@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "title": "AMG G63 - 5% Privacy Tint",
+    "category": "Tinting",
+    "tag": "TINTING",
+    "image": "/newGallery/g1.avif",
+    "size": "tall"
+  },
+  {
+    "id": "2",
+    "title": "Porsche 911 - Full PPF Wrap",
+    "category": "Protection",
+    "tag": "PROTECTION",
+    "image": "/newGallery/g2.avif",
+    "size": "normal"
+  },
+  {
+    "id": "3",
+    "title": "Audi RS7 - Showroom Detail",
+    "category": "Detailing",
+    "tag": "DETAILING",
+    "image": "/newGallery/g3.avif",
+    "size": "normal"
+  },
+  {
+    "id": "4",
+    "title": "McLaren 720S - Two-Stage Correction",
+    "category": "Paint Correction",
+    "tag": "PAINT CORRECTION",
+    "image": "/newGallery/g5.avif",
+    "size": "tall"
+  },
+  {
+    "id": "5",
+    "title": "BMW M4 - Strip & Re-Tint",
+    "category": "Tint Removal",
+    "tag": "TINT REMOVAL",
+    "image": "/newGallery/g6.avif",
+    "size": "normal"
+  },
+  {
+    "id": "6",
+    "title": "Gloss Enhancement Detail",
+    "category": "Detailing",
+    "tag": "DETAILING",
+    "image": "/newGallery/g7.avif",
+    "size": "normal"
+  },
+  {
+    "id": "7",
+    "title": "Corvette - Ceramic Coating",
+    "category": "Protection",
+    "tag": "PROTECTION",
+    "image": "/newGallery/g8.avif",
+    "size": "normal"
+  },
+  {
+    "id": "8",
+    "title": "BMW M4 Competition - Swirl Removal",
+    "category": "Paint Correction",
+    "tag": "PAINT CORRECTION",
+    "image": "/newGallery/g9.avif",
+    "size": "normal"
+  },
+  {
+    "id": "9",
+    "title": "BMW 4 Series - Signature Detail",
+    "category": "Detailing",
+    "tag": "DETAILING",
+    "image": "/newGallery/g10.avif",
+    "size": "normal"
+  }
+]

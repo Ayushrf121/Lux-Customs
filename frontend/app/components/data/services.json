@@ -1,34 +1,67 @@
 [
   {
-    "id": "window-tinting",
+    "id": "01",
+    "badge": "SIGNATURE SERVICE",
     "title": "Window Tinting",
-    "description": "Enhance your vehicle's privacy, reduce glare, and protect the interior from harmful UV rays with our professional window tinting services. Our high-quality films are designed to improve comfort and style while ensuring long-lasting performance.",
-    "image": "/ServicesCars/car1.webp",
-    "buttonText": "Window Tinting",
-    "link": "/services/window-tinting"
+    "description": "Premium ceramic and carbon films cut and shrunk in-house. Up to 99% UV rejection, cooler cabins, sharper lines — finished with tucked edges and a lifetime film warranty.",
+    "image": "/services/serviceC1.avif",
+    "features": [
+      "Ceramic & carbon film options",
+      "99% UV rejection",
+      "Lifetime film warranty",
+      "Computer-cut precision patterns"
+    ]
   },
   {
-    "id": "tint-removal",
+    "id": "02",
+    "badge": "CLEAN SLATE",
     "title": "Tint Removal",
-    "description": "Safely and efficiently remove old, bubbling, or peeling window tint without damaging your vehicle's glass or defroster lines. Restore a clean look and prepare your car for fresh application.",
-    "image": "/ServicesCars/tint-remove.jpeg",
-    "buttonText": "Tint Removal",
-    "link": "/services/tint-removal"
+    "description": "Old, bubbled or purple film steamed off safely — no scratched glass, no dead demister lines, no glue residue. Ready for a fresh re-tint the same day.",
+    "image": "/services/serviceC2.avif",
+    "features": [
+      "Steam-safe removal process",
+      "Demister & defroster safe",
+      "Full adhesive residue clean",
+      "Same-day re-tint available"
+    ]
   },
   {
-    "id": "ceramic-coating",
-    "title": "Ceramic Coating",
-    "description": "Protect your car's paint with our advanced ceramic coating services. This durable layer provides a high-gloss finish, repels dirt and water, and shields your vehicle from environmental contaminants, keeping it looking new for longer.",
-    "image": "/ServicesCars/c2.jpg",
-    "buttonText": "Ceramic Coating",
-    "link": "/services/ceramic-coating"
+    "id": "03",
+    "badge": "INSIDE & OUT",
+    "title": "Detailing",
+    "description": "From daily drivers to garage queens — deep interior extraction, wheel and arch decontamination, and a hand-finished exterior that feels brand new again.",
+    "image": "/services/serviceC3.avif",
+    "features": [
+      "Interior steam & extraction",
+      "Wheel, arch & engine bay detail",
+      "Hand wash & clay decontamination",
+      "Leather clean & condition"
+    ]
   },
   {
-    "id": "detailing",
-    "title": "Detailing & Protection",
-    "description": "Revitalize your car inside and out with our comprehensive detailing and protection services. We deeply clean, restore, and safeguard every surface to bring back that showroom finish.",
-    "image": "/ServicesCars/detailing.jpg",
-    "buttonText": "Detailing & Protection",
-    "link": "/services/detailing"
+    "id": "04",
+    "badge": "MIRROR FINISH",
+    "title": "Paint Correction",
+    "description": "Single and multi-stage machine polishing that erases swirls, holograms and oxidation — measured with paint depth gauges and inspected under studio LEDs.",
+    "image": "/services/serviceC4.avif",
+    "features": [
+      "1–3 stage machine polishing",
+      "Swirl & scratch removal",
+      "Paint depth measurement",
+      "Studio-light final inspection"
+    ]
+  },
+  {
+    "id": "05",
+    "badge": "LOCK IT IN",
+    "title": "Paint Protection",
+    "description": "Ceramic coatings and paint protection film that lock in the finish for years — hydrophobic, self-healing and backed by real warranties, not promises.",
+    "image": "/services/serviceC5.avif",
+    "features": [
+      "9H ceramic coatings",
+      "Self-healing PPF",
+      "Up to 7-year durability",
+      "Hydrophobic easy-clean surface"
+    ]
   }
 ]

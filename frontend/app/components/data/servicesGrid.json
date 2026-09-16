@@ -1,0 +1,37 @@
+[
+  {
+    "id": "01",
+    "title": "Window Tinting",
+    "description": "Premium ceramic and carbon films cut and shrunk in-house. Up to 99% UV rejection, cooler cabins, sharper lines — finished with tucked edges and a lifetime film warranty.",
+    "price": "FROM $249",
+    "image": "/services/serviceC1.avif"
+  },
+  {
+    "id": "02",
+    "title": "Tint Removal",
+    "description": "Old, bubbled or purple film steamed off safely — no scratched glass, no dead demister lines, no glue residue. Ready for a fresh re-tint the same day.",
+    "price": "FROM $99",
+    "image": "/services/serviceC2.avif"
+  },
+  {
+    "id": "03",
+    "title": "Detailing",
+    "description": "From daily drivers to garage queens — deep interior extraction, wheel and arch decontamination, and a hand-finished exterior that feels brand new again.",
+    "price": "FROM $179",
+    "image": "/services/serviceC3.avif"
+  },
+  {
+    "id": "04",
+    "title": "Paint Correction",
+    "description": "Single and multi-stage machine polishing that erases swirls, holograms and oxidation — measured with paint depth gauges and inspected under studio LEDs.",
+    "price": "FROM $399",
+    "image": "/services/serviceC4.avif"
+  },
+  {
+    "id": "05",
+    "title": "Paint Protection",
+    "description": "Ceramic coatings and paint protection film that lock in the finish for years — hydrophobic, self-healing and backed by real warranties, not promises.",
+    "price": "FROM $599",
+    "image": "/services/serviceC5.avif"
+  }
+]

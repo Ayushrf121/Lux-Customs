@@ -7,12 +7,12 @@ const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KE
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { fullName, email, phone, message, terms } = body;
+    const { fullName, email, phone, service, message } = body;
 
     // Server-side validation check
-    if (!fullName || !email || !phone || !message || !terms) {
+    if (!fullName || !email || !message) {
       return NextResponse.json(
-        { success: false, error: 'Please fill in all required fields and accept the terms.' },
+        { success: false, error: 'Please fill in all required fields.' },
         { status: 400 }
       );
     }
@@ -20,24 +20,25 @@ export async function POST(request) {
     // If Resend API key is configured, send actual email
     if (resend) {
       await resend.emails.send({
-        from: 'Lux Customs Website <onboarding@resend.dev>', // Update with your verified domain in production
-        to: ['luxcustoms.au@gmail.com'], // Replace with your actual recipient email.
-        subject: `New Quote Request from ${fullName}`,
+        from: 'Lux Customs Website <onboarding@resend.dev>',
+        to: ['luxcustoms.au@gmail.com'],
+        subject: `New Quote Request: ${service || 'General Enquiry'} from ${fullName}`,
         html: `
-          <div style="font-family: Arial, sans-serif; padding: 20px; background: #f4f4f4; border-radius: 10px;">
-            <h2 style="color: #1e40af;">New Quote Request - Lux Customs</h2>
+          <div style="font-family: Arial, sans-serif; padding: 20px; background: #121214; color: #fff; border-radius: 10px;">
+            <h2 style="color: #FBBF24;">New Enquiry - Lux Customs</h2>
             <p><strong>Full Name:</strong> ${fullName}</p>
             <p><strong>Email Address:</strong> ${email}</p>
-            <p><strong>Phone:</strong> ${phone}</p>
+            <p><strong>Phone:</strong> ${phone || 'N/A'}</p>
+            <p><strong>Selected Service:</strong> ${service || 'General Enquiry'}</p>
             <p><strong>Message:</strong></p>
-            <p style="background: #ffffff; padding: 15px; border-radius: 5px; border: 1px solid #ddd;">${message}</p>
+            <p style="background: #1f1f23; padding: 15px; border-radius: 5px; border: 1px solid #333; color: #ddd;">${message}</p>
           </div>
         `,
       });
     } else {
       // Fallback console log for local development testing without API key
       console.log('--- MOCK EMAIL SENT ---');
-      console.log({ fullName, email, phone, message, timestamp: new Date().toISOString() });
+      console.log({ fullName, email, phone, service, message, timestamp: new Date().toISOString() });
     }
 
     return NextResponse.json(

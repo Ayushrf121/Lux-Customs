@@ -3,50 +3,50 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FileQuestion, Home, ArrowLeft, Sparkles } from 'lucide-react';
+import { Home, ArrowRight, Sparkles } from 'lucide-react';
 import { fadeInFromBottom, staggerContainer } from './components/utils/animation';
 
 export default function NotFound() {
   return (
-    <div className="bg-zinc-950 text-zinc-300 min-h-screen relative overflow-hidden flex items-center justify-center py-24">
+    <div className="bg-zinc-950 text-zinc-300 min-h-screen relative overflow-hidden flex items-center justify-center py-24 selection:bg-[#FBBF24] selection:text-zinc-950">
       
-      {/* Background Accent Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
+      {/* Background Subtle Warm Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FBBF24]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         
         <motion.div 
           className="space-y-6"
+          variants={staggerContainer}
           initial="hidden"
           animate="visible"
-          variants={staggerContainer}
         >
-          {/* Badge */}
+          {/* Top Tag Badge */}
           <motion.div 
             variants={fadeInFromBottom} 
             custom={0}
-            className="inline-flex items-center space-x-2 bg-blue-600/15 border border-blue-500/40 px-4 py-1.5 rounded-full text-blue-400 text-xs font-semibold tracking-wider uppercase backdrop-blur-md shadow-lg shadow-blue-500/20 mx-auto"
+            className="inline-flex items-center space-x-2 bg-zinc-900/80 border border-zinc-800 px-4 py-1.5 rounded-full text-[#FBBF24] text-xs font-bold tracking-[0.2em] uppercase backdrop-blur-md mx-auto"
           >
-            <Sparkles className="w-3.5 h-3.5 text-blue-400 animate-pulse" />
+            <Sparkles className="w-3.5 h-3.5 text-[#FBBF24]" />
             <span>404 Error</span>
           </motion.div>
 
-          {/* Large Heading */}
+          {/* Large Headline */}
           <motion.h1 
             variants={fadeInFromBottom} 
             custom={0.2}
-            className="text-6xl sm:text-8xl font-black text-white tracking-tight"
+            className="text-5xl sm:text-7xl font-black text-white tracking-tight uppercase"
           >
-            Page <span className="bg-gradient-to-r from-white via-blue-200 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_2px_15px_rgba(59,130,246,0.4)]">Not Found</span>
+            Page Not <span className="text-[#FBBF24]">Found.</span>
           </motion.h1>
 
           {/* Description */}
           <motion.p 
             variants={fadeInFromBottom} 
             custom={0.4}
-            className="text-zinc-400 text-base sm:text-lg max-w-lg mx-auto leading-relaxed"
+            className="text-zinc-400 text-sm sm:text-base max-w-lg mx-auto leading-relaxed font-normal"
           >
-            Oops! The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+            The road you're looking for doesn't exist in our bay. Let's steer you back to familiar ground.
           </motion.p>
 
           {/* Action Buttons */}
@@ -57,18 +57,18 @@ export default function NotFound() {
           >
             <Link 
               href="/"
-              className="group inline-flex items-center justify-center bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-blue-600/30 hover:scale-105"
+              className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-[#FBBF24] text-zinc-950 font-bold px-8 py-4 rounded-full transition-all duration-300 hover:bg-[#f5b316] shadow-[0_0_20px_rgba(251,191,36,0.3)] hover:shadow-[0_0_30px_rgba(251,191,36,0.6)]"
             >
-              <Home className="w-4 h-4 mr-2" />
+              <Home className="w-4 h-4" />
               <span>Back To Home</span>
             </Link>
 
             <Link 
               href="/contact"
-              className="inline-flex items-center justify-center space-x-2 bg-zinc-900 hover:bg-zinc-800 text-white font-semibold px-8 py-4 rounded-xl border border-zinc-700 backdrop-blur-md transition-all duration-300 hover:scale-105"
+              className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-zinc-900/80 hover:bg-zinc-800 text-white font-semibold px-8 py-4 rounded-full border border-zinc-800 hover:border-[#FBBF24] transition-all duration-300"
             >
-              <ArrowLeft className="w-4 h-4 text-blue-400" />
-              <span>Contact Support</span>
+              <span>Contact Studio</span>
+              <ArrowRight className="w-4 h-4 text-[#FBBF24]" />
             </Link>
           </motion.div>
 

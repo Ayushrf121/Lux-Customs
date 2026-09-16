@@ -1,32 +1,20 @@
-import React from 'react'
-import Hero from './components/home/Hero'
-import Services from './components/home/Services'
-import About from './components/home/About'
-import Divider from './components/utils/Divider'
-import Process from './components/home/Process'
-import Gallery from './components/home/Gallery'
-import Testimonials from './components/home/Testimonials'
-import FAQ from './components/home/Faq'
-import ContactSection from './components/home/ContactSection'
+import HomeHero from './components/home/HomeHero'
+import MarqueeStrip from './components/utils/MarqueeStrip'
+import WhatWeDoSection from './components/home/WhatWeDoSection'
+import GoogleReviewsSection from './components/home/GoogleReviewsSection'
+import CtaBanner from './components/home/CTA'
+import ManifestoTeaserSection from './components/home/ManifestoTeaserSection'
+
 
 export default function page() {
   return (
     <>
-      <Hero />
-      <Services />
-      <Divider />
-      <About />
-      <Divider />
-      <Process />
-      <Divider />
-      <Gallery />
-      <Divider />
-      <Testimonials />
-      <Divider />
-      <FAQ />
-      <Divider />
-      <ContactSection />
-      <Divider />
+      <HomeHero/>
+      <MarqueeStrip/>
+      <WhatWeDoSection/>
+      <ManifestoTeaserSection/>
+      <GoogleReviewsSection/>
+      <CtaBanner/>
     </>
   )
 }
