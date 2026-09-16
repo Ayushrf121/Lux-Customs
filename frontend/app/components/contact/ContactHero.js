@@ -8,14 +8,14 @@ export default function ContactHero() {
   return (
     <section className="relative min-h-[75vh] sm:min-h-[80vh] flex flex-col justify-between bg-zinc-950 overflow-hidden px-6 sm:px-12 lg:px-20 pt-16 pb-12 border-b border-zinc-800/60 selection:bg-[#FBBF24] selection:text-zinc-950">
       
-      {/* Background Image with Dark Vignette & Gradient Overlay */}
+      {/* Background Image with Improved Visibility & Balanced Gradient Overlays */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/80 to-zinc-950/40 z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/50 to-zinc-950/80 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/90 via-zinc-950/50 to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/30 to-zinc-950/60 z-10" />
         <img 
-          src="/Requirements/Hero-bg (2).jpg" 
+          src="/services/serviceC5.avif" 
           alt="Lux Customs Contact Background" 
-          className="w-full h-full object-cover object-center opacity-40"
+          className="w-full h-full object-cover object-center opacity-70 scale-105"
         />
       </div>
 
@@ -42,7 +42,7 @@ export default function ContactHero() {
           <motion.h1 
             variants={fadeInFromBottom} 
             custom={0.2}
-            className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-wide uppercase leading-[1.1]"
+            className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-wide uppercase leading-[1.1] drop-shadow-md"
           >
             Let's talk <br />
             <span className="text-[#FBBF24]">your car.</span>
@@ -52,7 +52,7 @@ export default function ContactHero() {
           <motion.p 
             variants={fadeInFromBottom} 
             custom={0.4}
-            className="text-sm sm:text-base lg:text-lg text-zinc-400 max-w-xl font-normal leading-relaxed"
+            className="text-sm sm:text-base lg:text-lg text-zinc-300 max-w-xl font-normal leading-relaxed drop-shadow"
           >
             Call the studio, drop by Endeavour Hills, or send an enquiry — we reply within one business day.
           </motion.p>
