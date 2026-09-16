@@ -37,27 +37,27 @@ export default function MarqueeStrip() {
         {/* Outer scrolling container */}
         <div className="flex overflow-hidden">
           
-          <div className="animate-smooth-marquee">
+          <div className="animate-smooth-marquee flex items-center">
             {/* First track */}
-            <div className="flex items-center space-x-10 shrink-0">
+            <div className="flex items-center shrink-0">
               {items.map((item, index) => (
-                <div key={`item-1-${index}`} className="flex items-center space-x-10">
-                  <span className="text-zinc-300 font-bold tracking-[0.25em] text-xs sm:text-sm uppercase">
+                <div key={`item-1-${index}`} className="flex items-center">
+                  <span className="text-zinc-300 font-bold tracking-[0.25em] text-xs sm:text-sm uppercase whitespace-nowrap">
                     {item}
                   </span>
-                  <span className="w-2 h-2 rotate-45 bg-[#FBBF24] inline-block shrink-0" />
+                  <span className="w-2 h-2 rotate-45 bg-[#FBBF24] inline-block shrink-0 mx-6 sm:mx-8" />
                 </div>
               ))}
             </div>
 
             {/* Exact Duplicate track for seamless infinite looping */}
-            <div className="flex items-center space-x-10 shrink-0" aria-hidden="true">
+            <div className="flex items-center shrink-0" aria-hidden="true">
               {items.map((item, index) => (
-                <div key={`item-2-${index}`} className="flex items-center space-x-10">
-                  <span className="text-zinc-300 font-bold tracking-[0.25em] text-xs sm:text-sm uppercase">
+                <div key={`item-2-${index}`} className="flex items-center">
+                  <span className="text-zinc-300 font-bold tracking-[0.25em] text-xs sm:text-sm uppercase whitespace-nowrap">
                     {item}
                   </span>
-                  <span className="w-2 h-2 rotate-45 bg-[#FBBF24] inline-block shrink-0" />
+                  <span className="w-2 h-2 rotate-45 bg-[#FBBF24] inline-block shrink-0 mx-6 sm:mx-8" />
                 </div>
               ))}
             </div>
