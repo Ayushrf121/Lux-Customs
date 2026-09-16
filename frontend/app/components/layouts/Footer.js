@@ -27,15 +27,30 @@ export default function Footer() {
         >
 
           {/* Column 1: Logo & Company Bio (Span 4) */}
-          <motion.div variants={fadeInFromBottom} custom={0} className="lg:col-span-4 space-y-6">
-            <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center">
+          <motion.div variants={fadeInFromBottom} custom={0} className="lg:col-span-4 space-y-6 text-center md:text-left">
+            {/* Desktop Logo (Left Aligned) */}
+            <div className="hidden md:flex flex-shrink-0">
+              <Link href="/" className="inline-flex items-center">
                 <Image
                   src="/Requirements/navLogo.png"
                   alt="Lux Customs Logo"
                   width={160}
                   height={140}
                   className="object-contain"
+                  priority
+                />
+              </Link>
+            </div>
+
+            {/* Mobile Logo (Centered & Slightly Bigger) */}
+            <div className="flex md:hidden justify-center flex-shrink-0">
+              <Link href="/" className="inline-flex items-center">
+                <Image
+                  src="/Requirements/navLogo.png"
+                  alt="Lux Customs Logo"
+                  width={200}
+                  height={160}
+                  className="object-contain w-[180px] h-auto"
                   priority
                 />
               </Link>

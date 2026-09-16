@@ -20,7 +20,7 @@ export async function POST(request) {
     // If Resend API key is configured, send actual email
     if (resend) {
       await resend.emails.send({
-        from: 'Lux Customs Website <onboarding@resend.dev>',
+        from: 'Lux Customs Website : http://luxcustoms.au/',
         to: ['luxcustoms.au@gmail.com'],
         subject: `New Quote Request: ${service || 'General Enquiry'} from ${fullName}`,
         html: `
