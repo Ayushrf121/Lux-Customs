@@ -5,6 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Phone, MapPin, Clock } from 'lucide-react';
+import Instagram from '../icons/InstagramIcon'; 
+import Facebook from '../icons/FacebookIcon';
 import { fadeInFromBottom, staggerContainer } from '../utils/animation';
 
 export default function Footer() {
@@ -16,7 +18,7 @@ export default function Footer() {
       {/* Background Accent Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[200px] bg-[#FBBF24]/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-8 py-16 relative z-10">
 
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 items-start"
@@ -27,7 +29,7 @@ export default function Footer() {
         >
 
           {/* Column 1: Logo & Company Bio (Span 4) */}
-          <motion.div variants={fadeInFromBottom} custom={0} className="lg:col-span-4 space-y-6 text-center md:text-left">
+          <motion.div variants={fadeInFromBottom} custom={0} className="lg:col-span-4 space-y-6 text-left">
             {/* Desktop Logo (Left Aligned) */}
             <div className="hidden md:flex flex-shrink-0">
               <Link href="/" className="inline-flex items-center">
@@ -42,7 +44,7 @@ export default function Footer() {
               </Link>
             </div>
 
-            {/* Mobile Logo (Centered & Slightly Bigger) */}
+            {/* Mobile Logo (Centered) */}
             <div className="flex md:hidden justify-center flex-shrink-0">
               <Link href="/" className="inline-flex items-center">
                 <Image
@@ -62,7 +64,7 @@ export default function Footer() {
           </motion.div>
 
           {/* Column 2: Explore Links (Span 2) */}
-          <motion.div variants={fadeInFromBottom} custom={0.2} className="lg:col-span-2 space-y-4">
+          <motion.div variants={fadeInFromBottom} custom={0.2} className="lg:col-span-2 space-y-4 text-left">
             <h3 className="text-white font-bold text-xs tracking-[0.2em] uppercase">
               Explore
             </h3>
@@ -95,8 +97,8 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Column 3: Services Links pointing to /services (Span 3) */}
-          <motion.div variants={fadeInFromBottom} custom={0.4} className="lg:col-span-3 space-y-4">
+          {/* Column 3: Services Links (Span 3) */}
+          <motion.div variants={fadeInFromBottom} custom={0.4} className="lg:col-span-3 space-y-4 text-left">
             <h3 className="text-white font-bold text-xs tracking-[0.2em] uppercase">
               Services
             </h3>
@@ -129,8 +131,8 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Column 4: Get In Touch (Span 3) */}
-          <motion.div variants={fadeInFromBottom} custom={0.6} className="lg:col-span-3 space-y-4">
+          {/* Column 4: Get In Touch & Socials (Span 3) */}
+          <motion.div variants={fadeInFromBottom} custom={0.6} className="lg:col-span-3 space-y-4 text-left">
             <h3 className="text-white font-bold text-xs tracking-[0.2em] uppercase">
               Get In Touch
             </h3>
@@ -148,12 +150,34 @@ export default function Footer() {
                 <span>Mon – Sat · 9:00 AM – 6:00 PM</span>
               </div>
             </div>
+
+            {/* Social Media Icon Links placed directly under Get In Touch */}
+            <div className="flex items-center space-x-3.5 pt-2">
+              <a 
+                href="https://www.instagram.com/luxcustoms.au/?hl=en" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="w-11 h-11 rounded-2xl bg-zinc-900 border border-zinc-800 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:bg-zinc-800 hover:shadow-[0_0_20px_rgba(225,48,108,0.25)] hover:border-pink-500/30 group"
+              >
+                <Instagram className="w-5 h-5 transition-transform" />
+              </a>
+              <a 
+                href="https://www.facebook.com/profile.php?id=61593129088390&ref=PROFILE_EDIT_xav_ig_profile_page_web#" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="w-11 h-11 rounded-2xl bg-zinc-900 border border-zinc-800 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:bg-zinc-800 hover:shadow-[0_0_20px_rgba(24,119,242,0.25)] hover:border-blue-500/30 group"
+              >
+                <Facebook className="w-5 h-5 transition-transform" />
+              </a>
+            </div>
           </motion.div>
 
         </motion.div>
 
         {/* Bottom Bar: Copyright & Location Indicator */}
-        <div className="mt-16 pt-6 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500">
+        <div className="mt-16 pt-6 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 text-center sm:text-left">
           <p>© {currentYear} LUXCUSTOMS. All rights reserved.</p>
           <p className="tracking-[0.2em] text-zinc-600 uppercase mt-2 sm:mt-0">
             Endeavour Hills · VIC

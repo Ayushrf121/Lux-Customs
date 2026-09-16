@@ -59,7 +59,7 @@ export default function ContactPage() {
           </h1>
         </div>
 
-        {/* Main Grid: Form on Left (order-1 on mobile & desktop), Info Cards on Right */}
+        {/* Main Grid: Form on Left, Info Cards on Right */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Left Column: Form (Span 7) */}
@@ -88,70 +88,72 @@ export default function ContactPage() {
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               
-              {/* Name Field */}
-              <div className="space-y-2">
-                <label className="block text-xs font-bold tracking-widest text-zinc-400 uppercase">
-                  Name *
-                </label>
-                <input 
-                  type="text"
-                  placeholder="Your name"
-                  {...register("fullName", { required: "Name is required" })}
-                  className="w-full bg-zinc-950/80 border border-zinc-800 rounded-2xl px-4 py-4 text-white placeholder-zinc-600 focus:outline-none focus:border-[#FBBF24] transition-colors text-sm"
-                />
-                {errors.fullName && <p className="text-rose-500 text-xs mt-1">{errors.fullName.message}</p>}
+              {/* Row 1: Name & Email Side-by-Side */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="block text-xs font-bold tracking-widest text-zinc-400 uppercase">
+                    Name *
+                  </label>
+                  <input 
+                    type="text"
+                    placeholder="Your name"
+                    {...register("fullName", { required: "Name is required" })}
+                    className="w-full bg-zinc-950/80 border border-zinc-800 rounded-2xl px-4 py-4 text-white placeholder-zinc-600 focus:outline-none focus:border-[#FBBF24] transition-colors text-sm"
+                  />
+                  {errors.fullName && <p className="text-rose-500 text-xs mt-1">{errors.fullName.message}</p>}
+                </div>
+
+                <div className="space-y-2">
+                  <label className="block text-xs font-bold tracking-widest text-zinc-400 uppercase">
+                    Email *
+                  </label>
+                  <input 
+                    type="email"
+                    placeholder="you@email.com"
+                    {...register("email", { 
+                      required: "Email is required",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: "Invalid email format"
+                      }
+                    })}
+                    className="w-full bg-zinc-950/80 border border-zinc-800 rounded-2xl px-4 py-4 text-white placeholder-zinc-600 focus:outline-none focus:border-[#FBBF24] transition-colors text-sm"
+                  />
+                  {errors.email && <p className="text-rose-500 text-xs mt-1">{errors.email.message}</p>}
+                </div>
               </div>
 
-              {/* Email Field */}
-              <div className="space-y-2">
-                <label className="block text-xs font-bold tracking-widest text-zinc-400 uppercase">
-                  Email *
-                </label>
-                <input 
-                  type="email"
-                  placeholder="you@email.com"
-                  {...register("email", { 
-                    required: "Email is required",
-                    pattern: {
-                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: "Invalid email format"
-                    }
-                  })}
-                  className="w-full bg-zinc-950/80 border border-zinc-800 rounded-2xl px-4 py-4 text-white placeholder-zinc-600 focus:outline-none focus:border-[#FBBF24] transition-colors text-sm"
-                />
-                {errors.email && <p className="text-rose-500 text-xs mt-1">{errors.email.message}</p>}
-              </div>
+              {/* Row 2: Phone & Service Side-by-Side */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="block text-xs font-bold tracking-widest text-zinc-400 uppercase">
+                    Phone
+                  </label>
+                  <input 
+                    type="tel"
+                    placeholder="04xx xxx xxx"
+                    {...register("phone", { required: "Phone number is required" })}
+                    className="w-full bg-zinc-950/80 border border-zinc-800 rounded-2xl px-4 py-4 text-white placeholder-zinc-600 focus:outline-none focus:border-[#FBBF24] transition-colors text-sm"
+                  />
+                  {errors.phone && <p className="text-rose-500 text-xs mt-1">{errors.phone.message}</p>}
+                </div>
 
-              {/* Phone Field */}
-              <div className="space-y-2">
-                <label className="block text-xs font-bold tracking-widest text-zinc-400 uppercase">
-                  Phone
-                </label>
-                <input 
-                  type="tel"
-                  placeholder="04xx xxx xxx"
-                  {...register("phone", { required: "Phone number is required" })}
-                  className="w-full bg-zinc-950/80 border border-zinc-800 rounded-2xl px-4 py-4 text-white placeholder-zinc-600 focus:outline-none focus:border-[#FBBF24] transition-colors text-sm"
-                />
-                {errors.phone && <p className="text-rose-500 text-xs mt-1">{errors.phone.message}</p>}
-              </div>
-
-              {/* Service Dropdown Selection */}
-              <div className="space-y-2">
-                <label className="block text-xs font-bold tracking-widest text-zinc-400 uppercase">
-                  Service
-                </label>
-                <select
-                  {...register("service")}
-                  className="w-full bg-zinc-950/80 border border-zinc-800 rounded-2xl px-4 py-4 text-white focus:outline-none focus:border-[#FBBF24] transition-colors text-sm cursor-pointer"
-                >
-                  <option value="General Enquiry" className="bg-zinc-950 text-white">General Enquiry</option>
-                  <option value="Window Tinting" className="bg-zinc-950 text-white">Window Tinting</option>
-                  <option value="Tint Removal" className="bg-zinc-950 text-white">Tint Removal</option>
-                  <option value="Detailing" className="bg-zinc-950 text-white">Detailing</option>
-                  <option value="Paint Correction" className="bg-zinc-950 text-white">Paint Correction</option>
-                  <option value="Paint Protection" className="bg-zinc-950 text-white">Paint Protection</option>
-                </select>
+                <div className="space-y-2">
+                  <label className="block text-xs font-bold tracking-widest text-zinc-400 uppercase">
+                    Service
+                  </label>
+                  <select
+                    {...register("service")}
+                    className="w-full bg-zinc-950/80 border border-zinc-800 rounded-2xl px-4 py-4 text-white focus:outline-none focus:border-[#FBBF24] transition-colors text-sm cursor-pointer"
+                  >
+                    <option value="General Enquiry" className="bg-zinc-950 text-white">General Enquiry</option>
+                    <option value="Window Tinting" className="bg-zinc-950 text-white">Window Tinting</option>
+                    <option value="Tint Removal" className="bg-zinc-950 text-white">Tint Removal</option>
+                    <option value="Detailing" className="bg-zinc-950 text-white">Detailing</option>
+                    <option value="Paint Correction" className="bg-zinc-950 text-white">Paint Correction</option>
+                    <option value="Paint Protection" className="bg-zinc-950 text-white">Paint Protection</option>
+                  </select>
+                </div>
               </div>
 
               {/* Message Field */}
@@ -168,29 +170,31 @@ export default function ContactPage() {
                 {errors.message && <p className="text-rose-500 text-xs mt-1">{errors.message.message}</p>}
               </div>
 
-              {/* Submit Button */}
-              <button 
-                type="submit"
-                disabled={submitting}
-                className="w-full inline-flex items-center justify-center space-x-2 bg-[#FBBF24] text-zinc-950 font-bold py-4 rounded-full transition-all duration-300 hover:bg-[#f5b316] shadow-[0_0_20px_rgba(251,191,36,0.3)] hover:shadow-[0_0_30px_rgba(251,191,36,0.6)] cursor-pointer disabled:opacity-75"
-              >
-                {submitting ? (
-                  <span className="inline-flex items-center space-x-2">
-                    <Loader2 className="w-5 h-5 animate-spin" />
-                    <span>SENDING...</span>
-                  </span>
-                ) : (
-                  <span className="inline-flex items-center space-x-2">
-                    <Send className="w-4 h-4" />
-                    <span>Send Enquiry</span>
-                  </span>
-                )}
-              </button>
+              {/* Submit Button (Fixed sizing with inline-flex & padding instead of w-full) */}
+              <div className="pt-2">
+                <button 
+                  type="submit"
+                  disabled={submitting}
+                  className="inline-flex items-center justify-center space-x-2 bg-[#FBBF24] text-zinc-950 font-bold px-8 py-4 rounded-full transition-all duration-300 hover:bg-[#f5b316] shadow-[0_0_20px_rgba(251,191,36,0.3)] hover:shadow-[0_0_30px_rgba(251,191,36,0.6)] cursor-pointer disabled:opacity-75"
+                >
+                  {submitting ? (
+                    <span className="inline-flex items-center space-x-2">
+                      <Loader2 className="w-5 h-5 animate-spin" />
+                      <span>SENDING...</span>
+                    </span>
+                  ) : (
+                    <span className="inline-flex items-center space-x-2">
+                      <Send className="w-4 h-4" />
+                      <span>Send Enquiry</span>
+                    </span>
+                  )}
+                </button>
+              </div>
 
             </form>
           </motion.div>
 
-          {/* Right Column: Contact Cards & Google Map (Span 5, order-2) */}
+          {/* Right Column: Contact Cards & Google Map */}
           <motion.div 
             className="lg:col-span-5 space-y-6 order-2"
             initial="hidden"
@@ -198,7 +202,6 @@ export default function ContactPage() {
             viewport={{ once: true, margin: "-50px" }}
             variants={staggerContainer}
           >
-            {/* Card 1: Call The Studio */}
             <a 
               href="tel:0468317131"
               className="flex items-center space-x-4 bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6 hover:border-[#FBBF24] transition-all group"
@@ -212,7 +215,6 @@ export default function ContactPage() {
               </div>
             </a>
 
-            {/* Card 2: Visit Us */}
             <div className="flex items-center space-x-4 bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6">
               <div className="w-12 h-12 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center text-[#FBBF24] flex-shrink-0">
                 <MapPin className="w-5 h-5" />
@@ -223,7 +225,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Card 3: Hours */}
             <div className="flex items-center space-x-4 bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6">
               <div className="w-12 h-12 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center text-[#FBBF24] flex-shrink-0">
                 <Clock className="w-5 h-5" />
@@ -234,7 +235,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Google Map Embedded Widget */}
             <div className="rounded-2xl overflow-hidden border border-zinc-800 shadow-lg h-64 w-full">
               <iframe
                 title="Lux Customs Location Map"
