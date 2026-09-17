@@ -76,7 +76,7 @@ export default function WhatWeDoSection() {
                   {/* Replaced Price with Static Logo */}
                   <div className="pt-2">
                     <Image
-                      src="/Requirements/navLogo.png"
+                      src="/Requirements/newLogo.png"
                       alt="Lux Customs Logo"
                       width={isTopRow ? 90 : 75} 
                       height={isTopRow ? 36 : 30}

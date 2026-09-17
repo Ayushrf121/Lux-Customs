@@ -34,7 +34,7 @@ export default function Footer() {
             <div className="hidden md:flex flex-shrink-0">
               <Link href="/" className="inline-flex items-center">
                 <Image
-                  src="/Requirements/navLogo.png"
+                  src="/Requirements/newLogo.png"
                   alt="Lux Customs Logo"
                   width={160}
                   height={140}
@@ -48,7 +48,7 @@ export default function Footer() {
             <div className="flex md:hidden justify-center flex-shrink-0">
               <Link href="/" className="inline-flex items-center">
                 <Image
-                  src="/Requirements/navLogo.png"
+                  src="/Requirements/newLogo.png"
                   alt="Lux Customs Logo"
                   width={200}
                   height={160}
