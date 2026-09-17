@@ -23,17 +23,24 @@ export default function WhatWeDoSection() {
           </h2>
         </div>
 
-        {/* Bento Grid Layout (Bigger top 2 cards, 3 smaller cards on the bottom row) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        {/* Bento Grid Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
           {servicesData.map((service, index) => {
             const isTopRow = index < 2;
+            
+            // Top row takes 6/12 (half) width, Bottom row takes 4/12 (third) width on desktop
             const colSpanClass = isTopRow ? "lg:col-span-6" : "lg:col-span-4";
+            
+            // Top row is wider (16:10), Bottom row is squarer (4:3) on desktop. Mobile remains identical.
+            const aspectClass = isTopRow 
+              ? "aspect-[4/3] sm:aspect-[16/10]" 
+              : "aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/4] xl:aspect-[4/3]";
 
             return (
               <Link
                 key={service.id}
                 href="/contact"
-                className={`group relative bg-zinc-900/60 border border-zinc-800 rounded-3xl overflow-hidden p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:border-[#FBBF24] hover:shadow-[0_0_30px_rgba(251,191,36,0.15)] ${colSpanClass} aspect-[4/3] sm:aspect-[16/10]`}
+                className={`group relative bg-zinc-900/60 border border-zinc-800 rounded-3xl overflow-hidden p-6 sm:p-8 flex flex-col transition-all duration-300 hover:border-[#FBBF24] hover:shadow-[0_0_30px_rgba(251,191,36,0.15)] ${colSpanClass} ${aspectClass}`}
               >
                 {/* Background Image with Zoom & Brightened Opacity */}
                 <div className="absolute inset-0 z-0 overflow-hidden">
@@ -41,9 +48,9 @@ export default function WhatWeDoSection() {
                     src={service.image}
                     alt={service.title}
                     fill
-                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-105 opacity-70 group-hover:opacity-85"
+                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-105 opacity-60 group-hover:opacity-80"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-transparent" />
                 </div>
 
                 {/* Top Row: Number ID & Arrow Icon */}
@@ -56,18 +63,25 @@ export default function WhatWeDoSection() {
                   </div>
                 </div>
 
-                {/* Bottom Content: Title, Description & Price (Completely borderless text/tag) */}
-                <div className="relative z-10 space-y-3 pt-12">
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight group-hover:text-[#FBBF24] transition-colors">
+                {/* Bottom Content: Title, Description & Logo */}
+                {/* mt-auto forces this block to perfectly anchor to the bottom */}
+                <div className="relative z-10 space-y-3 mt-auto pt-8">
+                  <h3 className={`font-extrabold text-white tracking-tight group-hover:text-[#FBBF24] transition-colors ${isTopRow ? 'text-2xl sm:text-3xl' : 'text-xl sm:text-2xl'}`}>
                     {service.title}
                   </h3>
                   <p className="text-zinc-300 text-xs sm:text-sm leading-relaxed line-clamp-2">
                     {service.description}
                   </p>
+                  
+                  {/* Replaced Price with Static Logo */}
                   <div className="pt-2">
-                    <span className="inline-block text-[#FBBF24] text-xs font-bold tracking-wider">
-                      {service.price}
-                    </span>
+                    <Image
+                      src="/Requirements/navLogo.png"
+                      alt="Lux Customs Logo"
+                      width={isTopRow ? 90 : 75} 
+                      height={isTopRow ? 36 : 30}
+                      className="object-contain opacity-90"
+                    />
                   </div>
                 </div>
 

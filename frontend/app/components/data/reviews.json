@@ -1,34 +1,66 @@
 [
   {
     "id": "1",
-    "review": "“Best tint job I've had on any of my cars. Edges are tucked perfectly, zero bubbles, and they walked me through film options instead of just upselling. The G wagon looks mean now.”",
-    "name": "Daniel M.",
-    "time": "2 weeks ago",
-    "avatarBg": "bg-amber-600",
-    "initial": "D"
+    "review": "Really happy with the tinting job! Asa was professional, friendly and did an awesome job on my car. The tint looks great, no bubbles or imperfections, and the finish is exactly what I was after. The price was reasonable and the whole process was quick and easy. Definitely recommend him to anyone looking to get their car tinted!",
+    "name": "Jessica L",
+    "time": "a week ago",
+    "avatarBg": "bg-green-700",
+    "initial": "J"
   },
   {
     "id": "2",
-    "review": "“Took my Civic in for a full detail and paint correction after years of car park scratches. Honestly looked better than the day I bought it. The before/after photos they sent were unreal.”",
-    "name": "Sarah K.",
-    "time": "1 month ago",
+    "review": "Excellent experience! Asa did an outstanding job on my tints, finishing flawlessly with zero defects. Overall, I definitely will be coming back here whenever I need any form of auto care and would highly recommend it to anyone looking for an auto business that prioritises professionalism and delivering quality work.",
+    "name": "Ershad Alimi",
+    "time": "2 weeks ago",
+    "avatarBg": "bg-pink-600",
+    "initial": "E"
+  },
+  {
+    "id": "3",
+    "review": "Amazing service! Got my car ceramic coated, tinted, cut & polished, and fully detailed inside and out. Came out looking brand new! Great attention to detail and professional service. Highly recommend!",
+    "name": "Sham Salimi",
+    "time": "4 weeks ago",
+    "avatarBg": "bg-blue-600",
+    "initial": "S"
+  },
+  {
+    "id": "4",
+    "review": "Asa did an amazing job with my car tints and the ceramic coating is beautiful can’t ask for a better service and recommend it to everyone.",
+    "name": "Yasin Mohammadi",
+    "time": "a week ago",
+    "avatarBg": "bg-purple-600",
+    "initial": "Y"
+  },
+  {
+    "id": "5",
+    "review": "I needed my old tints removed as it started bubbling and new tints were installed. Asa took care of this without leaving any residue behind ensuring a slick finish, would highly recommend lux for all your auto custom needs.",
+    "name": "Stephen Plats",
+    "time": "2 weeks ago",
+    "avatarBg": "bg-stone-700",
+    "initial": "S"
+  },
+  {
+    "id": "6",
+    "review": "Very professional, tinted my hilux real good. Thanks Asa.",
+    "name": "AliSina Muradi",
+    "time": "5 days ago",
+    "avatarBg": "bg-zinc-600",
+    "initial": "A"
+  },
+  {
+    "id": "7",
+    "review": "Lux provided a professional and friendly service tinting my car.",
+    "name": "Star rise Tiling",
+    "time": "4 weeks ago",
     "avatarBg": "bg-teal-600",
     "initial": "S"
   },
   {
-    "id": "3",
-    "review": "“Had old purple tint removed and ceramic tint installed in one visit. No damage to the demister lines which two other shops warned me about. Proper professionals in Endeavour Hills.”",
-    "name": "Jay P.",
-    "time": "3 weeks ago",
-    "avatarBg": "bg-emerald-600",
-    "initial": "J"
-  },
-  {
-    "id": "4",
-    "review": "“Ceramic coating on our new Kluger — water just sheets off now and washing it takes half the time. Fair price, finished on time, and the studio is immaculate. Highly recommend.”",
-    "name": "Mel R.",
-    "time": "2 months ago",
-    "avatarBg": "bg-rose-600",
-    "initial": "M"
+    "id": "8",
+    "review": "Amazing job with the tint.",
+    "name": "Kingston Stewart",
+    "time": "5 days ago",
+    "avatarBg": "bg-stone-500",
+    "initial": "K"
   }
 ]

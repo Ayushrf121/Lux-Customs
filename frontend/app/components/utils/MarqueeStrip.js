@@ -5,7 +5,6 @@ import React from 'react';
 export default function MarqueeStrip() {
   const items = [
     "PAINT CORRECTION",
-    "PPF PROTECTION",
     "ENDEAVOUR HILLS",
     "TINT REMOVAL",
     "WINDOW TINTING",

@@ -35,12 +35,16 @@ export default function ServicesSection() {
                   {/* Subtle Image Gradient Vignette */}
                   <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/60 via-transparent to-transparent pointer-events-none" />
 
-                  {/* Price Tag Overlay matching your screenshot designs */}
-                  {service.price && (
-                    <div className="absolute bottom-6 left-6 bg-zinc-950/80 backdrop-blur-md border border-zinc-800 text-[#FBBF24] px-4 py-2 rounded-xl text-xs font-extrabold tracking-widest uppercase shadow-lg">
-                      {service.price}
-                    </div>
-                  )}
+                  {/* Logo Overlay replacing the price tag */}
+                  <div className="absolute bottom-3 left-3 z-10">
+                    <Image
+                      src="/Requirements/navLogo.png"
+                      alt="Lux Customs Logo"
+                      width={110}
+                      height={44}
+                      className="object-contain opacity-95 drop-shadow-2xl"
+                    />
+                  </div>
                 </div>
               </div>
 

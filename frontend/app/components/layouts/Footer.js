@@ -28,8 +28,8 @@ export default function Footer() {
           variants={staggerContainer}
         >
 
-          {/* Column 1: Logo & Company Bio (Span 4) */}
-          <motion.div variants={fadeInFromBottom} custom={0} className="lg:col-span-4 space-y-6 text-left">
+          {/* Column 1: Logo & Company Bio (Span 5) */}
+          <motion.div variants={fadeInFromBottom} custom={0} className="lg:col-span-5 space-y-6 text-left">
             {/* Desktop Logo (Left Aligned) */}
             <div className="hidden md:flex flex-shrink-0">
               <Link href="/" className="inline-flex items-center">
@@ -58,47 +58,13 @@ export default function Footer() {
               </Link>
             </div>
 
-            <p className="text-sm text-zinc-400 leading-relaxed pr-2">
+            <p className="text-sm text-zinc-400 leading-relaxed pr-2 max-w-md">
               Endeavour Hills' studio for window tinting, detailing, paint correction and paint protection. Precision in every panel.
             </p>
           </motion.div>
 
-          {/* Column 2: Explore Links (Span 2) */}
-          <motion.div variants={fadeInFromBottom} custom={0.2} className="lg:col-span-2 space-y-4 text-left">
-            <h3 className="text-white font-bold text-xs tracking-[0.2em] uppercase">
-              Explore
-            </h3>
-            <ul className="space-y-2.5 text-sm">
-              <li>
-                <Link href="/" className="hover:text-[#FBBF24] transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="hover:text-[#FBBF24] transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="hover:text-[#FBBF24] transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/gallery" className="hover:text-[#FBBF24] transition-colors">
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-[#FBBF24] transition-colors">
-                  Contact Us
-                </Link>
-              </li>
-            </ul>
-          </motion.div>
-
-          {/* Column 3: Services Links (Span 3) */}
-          <motion.div variants={fadeInFromBottom} custom={0.4} className="lg:col-span-3 space-y-4 text-left">
+          {/* Column 2: Services Links (Span 3) */}
+          <motion.div variants={fadeInFromBottom} custom={0.2} className="lg:col-span-3 space-y-4 text-left">
             <h3 className="text-white font-bold text-xs tracking-[0.2em] uppercase">
               Services
             </h3>
@@ -131,8 +97,8 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Column 4: Get In Touch & Socials (Span 3) */}
-          <motion.div variants={fadeInFromBottom} custom={0.6} className="lg:col-span-3 space-y-4 text-left">
+          {/* Column 3: Get In Touch & Socials (Span 4) */}
+          <motion.div variants={fadeInFromBottom} custom={0.4} className="lg:col-span-4 space-y-4 text-left">
             <h3 className="text-white font-bold text-xs tracking-[0.2em] uppercase">
               Get In Touch
             </h3>

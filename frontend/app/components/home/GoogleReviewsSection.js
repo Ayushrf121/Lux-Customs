@@ -102,7 +102,7 @@ export default function GoogleReviewsSection() {
 
                 {/* Review Text */}
                 <p className="text-zinc-300 text-xs sm:text-sm leading-relaxed font-normal">
-                  {item.review}
+                  "{item.review}"
                 </p>
               </div>
 

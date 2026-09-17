@@ -32,8 +32,8 @@ export default function Navbar() {
     return (
         <header 
             className={`sticky top-0 z-50 transition-all duration-300 ${
-                isScrolled 
-                    ? 'bg-zinc-950/70 backdrop-blur-md border-b border-zinc-800/50 shadow-lg' 
+                isScrolled || mobileMenuOpen
+                    ? 'bg-zinc-950/95 backdrop-blur-md border-b border-zinc-900 shadow-lg' 
                     : 'bg-zinc-950 border-b border-transparent'
             }`}
         >
@@ -73,7 +73,7 @@ export default function Navbar() {
                         </Link>
                     </nav>
 
-                    {/* 3. Right Side Buttons (Phone & Book Now) */}
+                    {/* 3. Right Side Buttons (Desktop: Phone & Book Now) */}
                     <div className="hidden lg:flex items-center space-x-6">
                         <a
                             href="tel:0468317131"
@@ -95,25 +95,25 @@ export default function Navbar() {
                     <div className="lg:hidden flex items-center">
                         <button
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            className="text-zinc-300 hover:text-white p-2 relative z-[60]"
+                            className={`text-zinc-300 hover:text-white transition-all flex items-center justify-center w-10 h-10 ${
+                                mobileMenuOpen ? 'border border-zinc-800 rounded-full' : ''
+                            }`}
                             aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
                         >
-                            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-7 h-7" />}
                         </button>
                     </div>
 
                 </div>
             </div>
 
-            {/* Mobile Full-Screen Menu */}
+            {/* Mobile Dropdown Menu (Matches exactly with screenshot) */}
             {mobileMenuOpen && (
-                <div
-                    className="lg:hidden fixed inset-x-0 top-[4rem] bottom-0 h-[calc(100vh-5rem)] h-[calc(100dvh-5rem)] bg-zinc-900/95 backdrop-blur-xl z-40 overflow-y-auto px-4 pt-4 pb-6 space-y-4"
-                >
+                <div className="lg:hidden absolute top-20 left-0 w-full bg-zinc-950 border-b border-zinc-900 shadow-2xl z-40 flex flex-col px-6 py-8 space-y-7">
                     <Link
                         href="/"
                         onClick={() => setMobileMenuOpen(false)}
-                        className="block py-2 text-zinc-300 hover:text-[#FBBF24] font-medium"
+                        className="text-xl font-bold text-[#FBBF24] tracking-wide"
                     >
                         Home
                     </Link>
@@ -121,7 +121,7 @@ export default function Navbar() {
                     <Link
                         href="/services"
                         onClick={() => setMobileMenuOpen(false)}
-                        className="block py-2 text-zinc-300 hover:text-[#FBBF24] font-medium border-t border-zinc-800 pt-3"
+                        className="text-xl font-bold text-white hover:text-[#FBBF24] transition-colors tracking-wide"
                     >
                         Services
                     </Link>
@@ -129,7 +129,7 @@ export default function Navbar() {
                     <Link
                         href="/about"
                         onClick={() => setMobileMenuOpen(false)}
-                        className="block py-2 text-zinc-300 hover:text-[#FBBF24] font-medium border-t border-zinc-800 pt-3"
+                        className="text-xl font-bold text-white hover:text-[#FBBF24] transition-colors tracking-wide"
                     >
                         About Us
                     </Link>
@@ -137,27 +137,29 @@ export default function Navbar() {
                     <Link
                         href="/gallery"
                         onClick={() => setMobileMenuOpen(false)}
-                        className="block py-2 text-zinc-300 hover:text-[#FBBF24] font-medium border-t border-zinc-800 pt-3"
+                        className="text-xl font-bold text-white hover:text-[#FBBF24] transition-colors tracking-wide"
                     >
                         Gallery
                     </Link>
 
-                    <div className="pt-4 flex flex-col space-y-3 border-t border-zinc-800">
+                    <Link
+                        href="/contact"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="text-xl font-bold text-white hover:text-[#FBBF24] transition-colors tracking-wide"
+                    >
+                        Contact Us
+                    </Link>
+
+                    {/* Mobile Phone Button (Replaces Book Now) */}
+                    <div className="pt-6">
                         <a
                             href="tel:0468317131"
                             onClick={() => setMobileMenuOpen(false)}
-                            className="flex items-center justify-center space-x-2 bg-zinc-800/80 text-white py-2.5 rounded-md font-semibold"
+                            className="w-full flex items-center justify-center space-x-3 bg-[#FBBF24] text-zinc-950 py-4 rounded-full font-extrabold text-[17px]"
                         >
-                            <Phone className="w-4 h-4 text-[#FBBF24]" />
+                            <Phone className="w-5 h-5" />
                             <span>0468 317 131</span>
                         </a>
-                        <Link
-                            href="/contact"
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="text-center bg-[#FBBF24] text-zinc-950 py-2.5 rounded-full font-bold shadow-[0_0_15px_rgba(251,191,36,0.4)]"
-                        >
-                            Book Now
-                        </Link>
                     </div>
                 </div>
             )}
